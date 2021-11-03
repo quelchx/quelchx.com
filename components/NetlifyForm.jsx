@@ -25,7 +25,7 @@ export default function NetlifyForm() {
 
           <div className="w-full bg-white lg:w-6/12 xl:w-5/12">
             <div className="flex flex-col items-start justify-start w-full h-full p-10 lg:p-16 xl:p-24">
-              <h4 className="w-full text-3xl text-gray-700 font-bold">
+              <h4 id="form" className="w-full text-3xl text-gray-700 font-bold">
                 Contact?
               </h4>
               <p className="text-lg text-gray-500">

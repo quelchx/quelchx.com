@@ -27,23 +27,6 @@ export default function Navigation() {
             {router}
           </nav>
         </div>
-
-        <div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
-          <a
-            href="https://github.com/quelchx"
-            target="_blank"
-            className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-gray-800 border border-transparent rounded-md shadow-sm hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-          >
-            Github
-          </a>
-          <a
-            href="https://www.linkedin.com/in/eric-quelch-768861201/?originalSubdomain=ca"
-            target="_blank"
-            className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-500 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
-          >
-            Linkedin
-          </a>
-        </div>
       </div>
     </section>
   );

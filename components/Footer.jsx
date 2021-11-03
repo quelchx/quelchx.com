@@ -1,17 +1,18 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <section className="text-gray-700 bg-white body-font">
       <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <a
-          href="#_"
-          className="text-xl font-black leading-none text-gray-900 select-none logo"
-        >
-          quelch<span className="text-green-600">x</span>
-        </a>
+        <div className="text-xl font-black leading-none text-gray-900 select-none logo">
+          <Link href="/">
+            quelch
+          </Link>
+          <span className="text-green-600 hover:text-cyan-600">x</span>
+        </div>
         <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">
-          © 2021 Eric Quelch   
+         © 2021 Eric Quelch
         </p>
         <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
           <a href="#" className="text-gray-400 hover:text-gray-500">

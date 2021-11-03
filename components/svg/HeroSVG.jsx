@@ -3,6 +3,7 @@ import React from "react";
 export default function HeroSVG() {
   return (
     <svg
+      id="hero-svg"
       xmlns="http://www.w3.org/2000/svg"
       width="800"
       height="650"

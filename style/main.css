@@ -2,10 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.is-icon {
+  transform: scale(3);
+}
 
-@media (max-width: 1024px) {
-  .headline-image {
-    display: none
+@media (max-width: 700px) {
+  #hero-svg {
+    transform: translate(10%);
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  #hero-svg {
+    transform: translate(13%);
+    height: 350px;
+    width: 350px
   }
 }
 
@@ -15,26 +28,45 @@
   textarea {
     @apply block w-full;
   }
+
+  code {
+    @apply text-green-800;
+  }
+
+  pre code {
+    @apply text-green-600;
+  }
+
+  pre {
+    @apply bg-gray-900 text-sm 
+    overflow-x-auto p-6 rounded-lg;
+  }
+
+  .markdown strong {
+    @apply text-gray-700 text-3xl;
+  }
 }
 
 @layer components {
+  /* navigation bar */
+  .navigation {
+    @apply flex flex-wrap items-center 
+    mb-5 text-base md:mb-0 md:pl-8 
+    md:ml-8 md:border-l md:border-gray-200;
+  }
+
   .nav-link {
-    @apply font-poppin text-lg hover:border-b-2;
+    @apply mr-5 font-medium leading-6 
+    hover:border-b-2
+    text-gray-600 hover:text-green-900;
   }
 
-  .btn {
-    @apply bg-cyan-400 py-3 px-5
-    text-black text-lg font-ubuntu
-    rounded-lg shadow-lg hover:bg-green-400 transition;
+  .button {
+    @apply flex items-center px-6 py-3;
   }
 
-  .card {
-    @apply bg-gray-700 shadow-lg 
-    rounded-lg bg-cover 
-    h-36 flex justify-center items-center;
-  }
-
-  .card-text {
-    @apply text-xl font-ubuntu -mt-2;
+  .bg-card {
+    @apply absolute z-0 inset-0 
+    shadow-lg transform rounded-md m-3;
   }
 }
