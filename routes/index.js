@@ -6,12 +6,7 @@ export const routes = [
   },
   {
     id: 2,
-    name: "Posts",
+    name: "Blog",
     path: "/posts",
-  },
-  {
-    id: 3,
-    name: "Contact",
-    path: "/contact",
   },
 ];

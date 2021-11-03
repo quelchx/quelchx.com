@@ -31,7 +31,9 @@ export default function Home() {
       </section>
       <Projects />
       <Features />
-      <NetlifyForm />
+      <div id='form'>
+        <NetlifyForm />
+      </div>
     </div>
   );
 }
