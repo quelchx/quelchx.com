@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (max-width: 1024px) {
+  .headline-image {
+    display: none
+  }
+}
+
+/* example */
+@layer base {
+  input,
+  textarea {
+    @apply block w-full;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply font-poppin text-lg hover:border-b-2;
+  }
+
+  .btn {
+    @apply bg-cyan-400 py-3 px-5
+    text-black text-lg font-ubuntu
+    rounded-lg shadow-lg hover:bg-green-400 transition;
+  }
+
+  .card {
+    @apply bg-gray-700 shadow-lg 
+    rounded-lg bg-cover 
+    h-36 flex justify-center items-center;
+  }
+
+  .card-text {
+    @apply text-xl font-ubuntu -mt-2;
+  }
+}
