@@ -100,10 +100,12 @@ export default function ComputersSVG() {
         fill="#65617d"
       />
       <polygon
+        className="animate-pulse"
         points="175.93 99.16 156.6 250.49 324.6 255.82 345.26 109.82 175.93 99.16"
         fill="#065f46"
       />
       <rect
+        className="animate-pulse"
         x="384.6"
         y="96.82"
         width="204.67"
@@ -123,6 +125,7 @@ export default function ComputersSVG() {
         fill="#65617d"
       />
       <polygon
+        className="animate-pulse"
         points="628.93 103.16 798.6 94.82 812.93 246.82 644.6 250.82 628.93 103.16"
         fill="#065f46"
       />
@@ -361,4 +364,3 @@ export default function ComputersSVG() {
     </svg>
   );
 }
-

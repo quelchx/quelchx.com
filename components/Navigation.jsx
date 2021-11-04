@@ -5,7 +5,7 @@ import { routes } from "@/routes";
 export default function Navigation() {
   const router = routes.map((route) => {
     return (
-      <div key={route.name} className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">
+      <div key={route.name} className="switch-decoration mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">
         <Link href={route.path}>{route.name}</Link>
       </div>
     );
@@ -17,7 +17,7 @@ export default function Navigation() {
         <div className="relative flex flex-col md:flex-row">
           <a
             href="#_"
-            className="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
+            className="bounce flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
           >
             <span className="mx-auto text-xl font-black leading-none text-gray-900 select-none">
               quelch<span className="text-green-600">x</span>

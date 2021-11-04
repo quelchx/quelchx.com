@@ -41,7 +41,7 @@ export default function Post({ post }) {
     <AOS animation="fade-up" duration="1000" delay="500">
       <div className="container relative w-full md:max-w-3xl mx-auto pt-20">
         <div className="w-full overflow-x-auto relative z-40 px-4 md:px-6 text-xl text-gray-800 leading-normal">
-          <div class="text-base md:text-sm hover:text-green-800 text-gray-600 mt-2 border-cyan-900 font-bold no-underline">
+          <div class="switch-decoration text-base md:text-sm hover:text-green-800 text-gray-600 mt-2 border-cyan-900 font-bold no-underline">
             <Link href="/posts">Back To Blogs</Link>
           </div>
           <AOS animation="fade-right" delay="700" duration="500">

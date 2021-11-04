@@ -130,6 +130,7 @@ export default function WebpageSVG() {
           cy="13.281"
           r="4.815"
           fill="#fff"
+          
         />
         <circle
           id="a5a428bb-42a2-4f57-9e6c-9979c01a2490"
@@ -146,12 +147,14 @@ export default function WebpageSVG() {
           fill="#fff"
         />
         <path
+          className="animate-pulse"
           id="b4a2d72b-abc3-4d2f-a2b8-a2aff6897b26-91"
           d="M297.74287,192.20533l-38.133,37.657,38.133,37.656,8.58-8.58-28.835-28.839,29.076-29.076Z"
           transform="translate(-177.13785 -97.98434)"
           fill="#065f46"
         />
         <path
+          className="animate-pulse"
           id="b5120d89-6cbe-4bfa-9a1b-cf9b07deff91-92"
           d="M328.98787,192.20533l38.132,37.657-38.132,37.656-8.58-8.58,28.837-28.838-29.078-29.077Z"
           transform="translate(-177.13785 -97.98434)"
@@ -170,6 +173,7 @@ export default function WebpageSVG() {
           fill="#e6e6e6"
         />
         <circle
+          className="animate-pulse"
           id="f7f4957b-eaa8-456b-bf02-bacf7de3ef80"
           cx="137.04001"
           cy="277.695"
@@ -177,24 +181,28 @@ export default function WebpageSVG() {
           fill="#e6e6e6"
         />
         <path
+          className="animate-pulse"
           id="fb0f055d-da6e-47f2-bb6d-7ff26d7b746a-95"
           d="M370.68788,359.65533a4.006,4.006,0,0,0-.01037,8.012H559.54884a4.006,4.006,0,0,0,0-8.012Z"
           transform="translate(-177.13785 -97.98434)"
           fill="#065f46"
         />
         <path
+          className="animate-pulse"
           id="bfcde504-8c45-4d21-843b-87b1f7e22ce0-96"
           d="M370.68788,383.69235a4.006,4.006,0,0,0-.01037,8.012h81.27636a4.006,4.006,0,0,0,.01038-8.012H370.68788Z"
           transform="translate(-177.13785 -97.98434)"
           fill="#065f46"
         />
         <path
+          className="animate-pulse"
           id="a66699ea-75f1-4575-b6d5-52b0b1f8e30c-97"
           d="M450.38788,225.65533a4.019,4.019,0,0,0,0,8.012h174.47a4.019,4.019,0,0,0,0-8.012Z"
           transform="translate(-177.13785 -97.98434)"
           fill="#e6e6e6"
         />
         <path
+          className="animate-pulse"
           id="bbc4ca7b-25d4-4c7e-b3d4-0411f69bd48f-98"
           d="M451.53583,249.65533c-2.679,0-4.851,1.794-4.851,4.006s2.172,4.006,4.851,4.006h228.7c2.679,0,4.851-1.794,4.851-4.006s-2.172-4.006-4.851-4.006Z"
           transform="translate(-177.13785 -97.98434)"

@@ -1,0 +1,77 @@
+.switch-decoration:hover {
+  text-decoration: underline;
+  animation-name: switch-text-decoration;
+  animation-duration: 250ms;
+  animation-iteration-count: 2;
+}
+
+.bouncing {
+  animation: bounce 0.4s infinite;
+}
+
+.bounce:hover {
+  animation: bounce 0.5s infinite;
+}
+
+.wiggle {
+  animation: shuffle 0.3s infinite;
+}
+
+.shuffle:hover {
+  animation: shuffle 0.5s infinite;
+}
+
+@keyframes switch-text-decoration {
+  20% {
+    text-decoration: overline;
+  }
+  40% {
+    text-decoration: line-through;
+  }
+  60% {
+    text-decoration: transparent;
+    color: transparent;
+  }
+  80% {
+    text-decoration: line-through;
+  }
+  100% {
+    text-decoration: underline;
+  }
+}
+
+@keyframes shuffle {
+  60% {
+    transform: translateX(0px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes bounce {
+  30% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink {
+  49% {
+    background-color: black;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+}

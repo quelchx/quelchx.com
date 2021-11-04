@@ -17,7 +17,7 @@ export default function Features() {
 
   return (
     <section className="py-20 bg-white">
-      <AOS animation="zoom-in" delay="500" duration="500">
+      <AOS animation="zoom-in" delay="200" duration="300">
         <div className="container max-w-6xl px-4 mx-auto">
           <h2 className="text-4xl font-bold tracking-tight text-gray-600 text-center">
             Experienced With

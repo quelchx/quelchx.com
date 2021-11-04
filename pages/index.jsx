@@ -3,6 +3,7 @@ import Content from "@/components/Content";
 import Projects from "@/components/Projects";
 import Features from "@/components/Features";
 import NetlifyForm from "@/components/NetlifyForm";
+import Questions from "@/components/Questions";
 import AOS from "@/components/AOS";
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
               </div>
               <a
                 href="#form"
-                className="inline-flex items-center justify-center w-full px-5 py-4 mt-6 ml-0 font-sans text-base leading-none text-white no-underline bg-green-600 border border-green-600 border-solid rounded cursor-pointer md:w-auto lg:mt-0 hover:bg-green-700 hover:border-green-700 hover:text-white focus-within:bg-green-700 focus-within:border-green-700 focus-within:text-white sm:text-lg lg:ml-6 md:text-xl"
+                className="bounce inline-flex items-center justify-center w-full px-5 py-4 mt-6 ml-0 font-sans text-base leading-none text-white no-underline bg-green-600 border border-green-600 border-solid rounded cursor-pointer md:w-auto lg:mt-0 hover:bg-green-700 hover:border-green-700 hover:text-white focus-within:bg-green-700 focus-within:border-green-700 focus-within:text-white sm:text-lg lg:ml-6 md:text-xl"
               >
                 Contact Me
               </a>
@@ -34,7 +35,12 @@ export default function Home() {
       </AOS>
       <Projects />
       <Features />
-      <NetlifyForm />
+      <AOS animation="fade-up" duration="500" delay="500">
+        <NetlifyForm />
+      </AOS>
+      <AOS delay="500" animation='fade-up'>
+        <Questions />
+      </AOS>
     </div>
   );
 }

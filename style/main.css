@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './theme.css';
+@import "./animations.css";
+@import "./theme.css";
 
 .is-icon {
   transform: scale(3);
 }
 
 @media (max-width: 700px) {
-#hero-svg {
+  #hero-svg {
     transform: translate(10%);
     height: 400px;
     width: 400px;
@@ -70,4 +71,3 @@
     shadow-lg transform rounded-md m-3;
   }
 }
-

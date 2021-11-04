@@ -28,7 +28,7 @@ export default function NetlifyForm() {
 
           <div className="w-full bg-white lg:w-6/12 xl:w-5/12">
             <div className="flex flex-col items-start justify-start w-full h-full p-10 lg:p-16 xl:p-24">
-              <AOS animation="fade-down" delay="500" duration="500">
+              <AOS animation="fade-down" delay="200" duration="500">
                 <h4
                   id="form"
                   className="w-full text-3xl text-gray-700 font-bold"
@@ -44,42 +44,57 @@ export default function NetlifyForm() {
                 </p>
               </AOS>
               <div className="relative w-full mt-6 space-y-4">
-                <AOS>
-                  <div className="relative">
-                    <label className="font-medium text-gray-900">Name</label>
-                    <input
-                      type="text"
-                      className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
-                      placeholder="Enter Your Name"
-                    />
-                  </div>
-                  <div className="relative">
-                    <label className="font-medium text-gray-900">Email</label>
-                    <input
-                      type="text"
-                      className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
-                      placeholder="Enter Your Email Address"
-                    />
-                  </div>
-                  <div className="relative">
-                    <label className="font-medium text-gray-900">
-                      Password
-                    </label>
-                    <textarea
-                      rows="10"
-                      className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
-                      placeholder="Message"
-                    />
-                  </div>
-                  <div className="relative mt-4">
-                    <a
-                      href="#_"
-                      className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 ease"
-                    >
-                      Send
-                    </a>
-                  </div>
-                </AOS>
+                <form
+                  method="POST"
+                  name="contact"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                >
+                  <AOS>
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <div className="relative">
+                      <label className="font-medium text-gray-900">Name</label>
+                      <input
+                        name="name"
+                        type="text"
+                        className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+                        placeholder="Enter Your Name"
+                      />
+                    </div>
+                    <div className="relative my-4">
+                      <label className="font-medium text-gray-900">Email</label>
+                      <input
+                        name="email"
+                        type="text"
+                        className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+                        placeholder="Enter Your Email Address"
+                      />
+                    </div>
+                    <div className="relative">
+                      <label className="font-medium text-gray-900">
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        rows="10"
+                        className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+                        placeholder="Message"
+                      />
+                    </div>
+                    <div className="relative">
+                      <div data-netlify-recaptcha="true"></div>
+                    </div>
+                    <div className="relative mt-4">
+                      <button
+                        type="submit"
+                        className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hover:bg-green-700 ease"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </AOS>
+                </form>
               </div>
             </div>
           </div>
