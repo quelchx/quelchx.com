@@ -15,7 +15,7 @@ function Application({ Component, pageProps }) {
   }, []);
 
   return (
-    <section>
+    <section id="theme" className="dark">
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link

@@ -31,6 +31,11 @@
     @apply block w-full;
   }
 
+  input:checked ~ .dot {
+    transform: translateX(100%);
+    @apply bg-gray-800;
+  }
+
   code {
     @apply text-green-800;
   }

@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="text-gray-700 bg-white body-font">
+    <section className="text-gray-700 dark:text-white dark:bg-gray-800 bg-white body-font">
       <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <div className="text-xl font-black leading-none text-gray-900 select-none logo">
+        <div className="text-xl font-black leading-none text-gray-900 dark:text-white select-none logo">
           <Link href="/">quelch</Link>
           <span className="text-green-600 hover:text-cyan-600">x</span>
         </div>

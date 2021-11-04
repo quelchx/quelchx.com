@@ -20,14 +20,17 @@
 }
 
 .polygot-icon {
-  color: #B45309;
+  color: #b45309;
 }
 
 .server-icon {
-  color: #4B5563;
+  color: #4b5563;
 }
 
 .cms-icon {
-  color: #4338CA;
+  color: #4338ca;
 }
 
+.dark strong {
+  color: white !important;
+}
