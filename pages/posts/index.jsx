@@ -2,10 +2,10 @@ import React from "react";
 import Articles from "@/components/Articles";
 import Questions from "@/components/Questions";
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const res = await fetch(process.env.BLOG_API);
   const articles = await res.json();
-
+  
   if (!articles) {
     return {
       notFound: true,

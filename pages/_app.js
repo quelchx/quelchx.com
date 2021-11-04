@@ -1,9 +1,19 @@
 import Head from "next/head";
-import "@/style/main.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import NextNProgress from "nextjs-progressbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "@/style/main.css";
+
+import { useEffect } from "react";
 
 function Application({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <section>
       <Head>
@@ -21,9 +31,12 @@ function Application({ Component, pageProps }) {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <Navigation />
-      <Component {...pageProps} />
-      <Footer />
+      <NextNProgress color="#059669" height={5} />
+      <section>
+        <Navigation />
+        <Component {...pageProps} />
+        <Footer />
+      </section>
     </section>
   );
 }

@@ -1,0 +1,33 @@
+/* @apply doesn't work + assigning them in assets.js as tailwindcss classes doesn't work either */
+.sass-icon {
+  color: #be185d;
+}
+
+.react-icon {
+  color: #2563eb;
+}
+
+.vue-icon {
+  color: #059669;
+}
+
+.angular-icon {
+  color: #dc2626;
+}
+
+.uikit-icon {
+  color: #fbbf24;
+}
+
+.polygot-icon {
+  color: #B45309;
+}
+
+.server-icon {
+  color: #4B5563;
+}
+
+.cms-icon {
+  color: #4338CA;
+}
+
