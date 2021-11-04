@@ -31,6 +31,14 @@
   color: #4338ca;
 }
 
+body .dark {
+  background-color: #3b3b3b;
+}
+
+body .light {
+  background-color: white;
+}
+
 .dark strong {
   color: white !important;
 }
