@@ -15,7 +15,7 @@ export default function Footer() {
          © 2021 Eric Quelch
         </p>
         <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
-          <a href="#" className="text-gray-400 hover:text-gray-500">
+          {/* <a href="#" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">Facebook</span>
             <svg
               className="w-6 h-6"
@@ -29,9 +29,9 @@ export default function Footer() {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </a> */}
 
-          <a href="#" className="text-gray-400 hover:text-gray-500">
+          {/* <a href="#" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">Instagram</span>
             <svg
               className="w-6 h-6"
@@ -45,7 +45,7 @@ export default function Footer() {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </a> */}
 
           <a href="#" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">Twitter</span>
