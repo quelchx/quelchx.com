@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Hero from "@/components/Hero";
 import Content from "@/components/Content";
 import Projects from "@/components/Projects";
@@ -5,9 +6,15 @@ import Features from "@/components/Features";
 import NetlifyForm from "@/components/NetlifyForm";
 import Questions from "@/components/Questions";
 import AOS from "@/components/AOS";
+
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Eric Quelch</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Eric Quelch" key="title" />
+      </Head>
       <Hero id="top" />
       <Content />
       <AOS delay="500" duration="500">
@@ -38,7 +45,7 @@ export default function Home() {
       <AOS animation="fade-up" duration="500" delay="500">
         <NetlifyForm />
       </AOS>
-      <AOS delay="500" animation='fade-up'>
+      <AOS delay="500" animation="fade-up">
         <Questions />
       </AOS>
     </div>

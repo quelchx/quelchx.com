@@ -6,25 +6,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      zIndex: {
-        '-10': '10'
-      },
-      // example
-      fontFamily: {
-        ubuntu: ["Ubuntu", "sans-serif"],
-        poppin: ["Poppins", "sans-serif"],
-        monaco: ["Monaco", "sans-serif"],
-      },
-      // example
       colors: {
         lime: colors.lime,
         cyan: colors.cyan,
       },
-      // example
-      backgroundImage: (theme) => ({
-        photo:
-          "url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?cs=srgb&dl=pexels-hristo-fidanov-1252890.jpg&fm=jpg')",
-      }),
     },
   },
   variants: {

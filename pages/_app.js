@@ -17,12 +17,7 @@ function Application({ Component, pageProps }) {
   return (
     <section>
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap"
-          rel="stylesheet"
-        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
