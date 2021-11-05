@@ -44,7 +44,7 @@ export default function Navigation() {
             {router}
           </nav>
         </div>
-        <div className="font-medium leading-6 dark:text-white text-gray-60">
+        <div>
           <div className="flex items-center justify-center w-full">
             <label className="flex items-center cursor-pointer">
               <div className="relative">
@@ -53,7 +53,7 @@ export default function Navigation() {
                   type="checkbox"
                   className="sr-only"
                 />
-                <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                <div className="block bg-gray-600 w-14 h-8 rounded"></div>
                 <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
               </div>
             </label>
