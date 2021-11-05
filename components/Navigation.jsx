@@ -44,7 +44,7 @@ export default function Navigation() {
             {router}
           </nav>
         </div>
-        <div className="mr-5 font-medium leading-6 dark:text-white text-gray-60">
+        <div className="font-medium leading-6 dark:text-white text-gray-60">
           <div className="flex items-center justify-center w-full">
             <label className="flex items-center cursor-pointer">
               <div className="relative">
