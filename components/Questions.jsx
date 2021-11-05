@@ -5,25 +5,31 @@ import AOS from "@/components/AOS";
 export default function Questions() {
   const listLibraries = stack.libraries.map((library) => {
     return (
-      <AOS animation="fade-right" delay="400">
-        <li className="mx-6">{library}</li>
-      </AOS>
+      <div key={library.name}>
+        <AOS animation="fade-right" delay="400">
+          <li className="mx-6">{library.name}</li>
+        </AOS>
+      </div>
     );
   });
 
   const listFiles = stack.files.map((file) => {
     return (
-      <AOS animation="fade-left">
-        <li className="mx-6">{file}</li>
-      </AOS>
+      <div key={file.name}>
+        <AOS animation="fade-left">
+          <li className="mx-6">{file.name}</li>
+        </AOS>
+      </div>
     );
   });
 
   const listAssets = stack.assets.map((asset) => {
     return (
-      <AOS animation="fade-right">
-        <li className="mx-6">{asset}</li>
-      </AOS>
+      <div key={asset.name}>
+        <AOS animation="fade-right">
+          <li className="mx-6">{asset.name}</li>
+        </AOS>
+      </div>
     );
   });
 

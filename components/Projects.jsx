@@ -4,18 +4,20 @@ import AOS from "@/components/AOS";
 import { projects } from "../interfaces/projects";
 
 export default function Projects() {
-  const listProjects = projects.map((project) => {
+  const listProjects = projects.map((project, index) => {
     return (
-      <AOS animation="zoom-in" duration="500" delay="300">
-        <div className="mt-4" key={project.id}>
-          <Project
-            name={project.name}
-            image={project.image}
-            details={project.details}
-            path={project.path}
-          />
-        </div>
-      </AOS>
+      <div key={project.name}>
+        <AOS animation="zoom-in" duration="500" delay="300">
+          <div className="mt-4">
+            <Project
+              name={project.name}
+              image={project.image}
+              details={project.details}
+              path={project.path}
+            />
+          </div>
+        </AOS>
+      </div>
     );
   });
 

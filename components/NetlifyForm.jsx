@@ -52,7 +52,6 @@ export default function NetlifyForm() {
                 >
                   <AOS>
                     <input type="hidden" name="form-name" value="contact" />
-
                     <div className="relative">
                       <label className="font-medium dark:text-cyan-50 text-gray-900">Name</label>
                       <input

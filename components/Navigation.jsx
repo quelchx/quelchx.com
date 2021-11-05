@@ -15,8 +15,6 @@ export default function Navigation() {
       theme.className = "dark";
       setToggle(false);
     }
-    console.log(theme)
-
   };
 
   const router = routes.map((route) => {
@@ -48,13 +46,11 @@ export default function Navigation() {
         </div>
         <div className="mr-5 font-medium leading-6 dark:text-white text-gray-60">
           <div className="flex items-center justify-center w-full">
-            <span className="mr-3">Theme</span>
-            <label for="toggleB" className="flex items-center cursor-pointer">
+            <label className="flex items-center cursor-pointer">
               <div className="relative">
                 <input
                   onClick={toggleTheme}
                   type="checkbox"
-                  id="toggleB"
                   className="sr-only"
                 />
                 <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
