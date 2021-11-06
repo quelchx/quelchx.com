@@ -17,6 +17,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/eric-quelch-768861201/?originalSubdomain=ca"
             className="text-gray-400 hover:text-gray-500"
             target="_blank"
+            referrerPolicy="none"
           >
             <span className="sr-only">Linkedin</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -27,6 +28,7 @@ export default function Footer() {
           <a
             href="https://twitter.com/ericquelch"
             target="_blank"
+            referrerPolicy="none"
             className="text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">Twitter</span>
@@ -42,6 +44,8 @@ export default function Footer() {
 
           <a
             href="https://github.com/quelchx"
+            target="_blank"
+            referrerPolicy="none"
             className="text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">GitHub</span>

@@ -48,6 +48,7 @@ export default function Navigation() {
           <div className="flex items-center justify-center w-full">
             <label className="flex items-center cursor-pointer">
               <div className="relative">
+                <label htmlFor="checkbox" />
                 <input
                   onClick={toggleTheme}
                   type="checkbox"
