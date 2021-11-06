@@ -41,21 +41,21 @@ export default function Questions() {
         </h2>
         <div className="grid grid-cols-1 gap-0 dark:text-cyan-50 text-gray-600 md:grid-cols-2 md:gap-10">
           <AOS animation="fade-down">
-            <h5 className="mt-10 mb-3 font-semibold text-gray-900 dark:text-cyan-400">
+            <p className="mt-10 mb-3 font-semibold text-gray-900 dark:text-cyan-400">
               Made With
-            </h5>
+            </p>
             <ul className="list-disc">{listLibraries}</ul>
           </AOS>
           <AOS animatiom="fade-up">
-            <h5 className="mt-10 mb-3 font-semibold text-gray-900 dark:text-cyan-400">
+            <p className="mt-10 mb-3 font-semibold text-gray-900 dark:text-cyan-400">
               Files
-            </h5>
+            </p>
             <ul className="list-disc">{listFiles}</ul>
           </AOS>
           <AOS animatiom="fade-down">
-            <h5 className="mt-10 mb-3 font-semibold text-gray-900 dark:text-cyan-400">
+            <p className="mt-10 mb-3 font-semibold text-gray-900 dark:text-cyan-400">
               Files
-            </h5>
+            </p>
             <ul className="list-disc">{listAssets}</ul>
           </AOS>
         </div>

@@ -23,9 +23,9 @@ export default function Articles({ posts }) {
           </p>
         </AOS>
         <AOS animation="fade-down" duration="500" delay="300">
-          <h3 className="shuffle mt-1 text-2xl font-bold text-left dark:text-white ext-gray-800 sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center">
+          <p className="shuffle mt-1 text-2xl font-bold text-left dark:text-white ext-gray-800 sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center">
             Articles and Posts
-          </h3>
+          </p>
           <p className="bounce mt-1 font-bold text-left dark:text-white text-gray-600 sm:mx-6  md:text-4x sm:text-center">
             This blogs intensions is to educate and showcase some things you can
             do in web development.

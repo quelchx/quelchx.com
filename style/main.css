@@ -40,8 +40,16 @@
     @apply text-green-800;
   }
 
+  .dark code {
+    @apply text-cyan-600;
+  }
+
   pre code {
     @apply text-green-600;
+  }
+
+  .dark pre code {
+    @apply text-cyan-500;
   }
 
   pre {

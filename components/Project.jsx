@@ -17,12 +17,12 @@ export default function Project({details, path, image, name}) {
           </p>
         </div>
 
-        <h3 className="pl-12 mt-3 text-sm font-medium leading-5 dark:text-green-300 text-gray-800 truncate sm:text-base lg:text-base">
+        <p className="pl-12 mt-3 text-sm font-medium leading-5 dark:text-green-300 text-gray-800 truncate sm:text-base lg:text-base">
           {name}
           <span className="mt-1 text-sm leading-5 text-gray-500 dark:text-green-400 truncate">
             <a href={path}> - Visit</a>
           </span>
-        </h3>
+        </p>
       </div>
       <img
         className="flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"

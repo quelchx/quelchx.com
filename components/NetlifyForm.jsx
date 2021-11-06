@@ -29,12 +29,12 @@ export default function NetlifyForm() {
           <div className="w-full bg-white dark:bg-gray-700 lg:w-6/12 xl:w-5/12">
             <div className="flex flex-col items-start justify-start w-full h-full p-10 lg:p-16 xl:p-24">
               <AOS animation="fade-down" delay="200" duration="500">
-                <h4
+                <p
                   id="form"
                   className="w-full text-3xl text-gray-700 dark:text-cyan-400 font-bold"
                 >
                   Contact?
-                </h4>
+                </p>
                 <p className="text-lg text-gray-500 dark:text-cyan-50">
                   You can use this form to contact me or send me an{" "}
                   <a className="text-green-600" href="mailto:quelchx@gmail.com">
