@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Project({details, path, image, name}) {
+export default function Project({ details, path, image, name }) {
   return (
     <blockquote className="flex items-center justify-between w-full col-span-1 p-6 dark:bg-gray-700 bg-white rounded-lg shadow">
       <div className="flex flex-col pr-8">
@@ -28,6 +28,8 @@ export default function Project({details, path, image, name}) {
         className="flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"
         src={image}
         alt=""
+        width="auto"
+        height="auto"
       />
     </blockquote>
   );
