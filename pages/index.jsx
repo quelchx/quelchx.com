@@ -14,6 +14,10 @@ export default function Home() {
         <title>Eric Quelch</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="Eric Quelch" key="title" />
+        <meta
+          name="description"
+          content="Eric Quelch's personal web portfolio"
+        />
       </Head>
       <Hero id="top" />
       <Content />

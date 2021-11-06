@@ -43,7 +43,7 @@ export default function Post({ post }) {
       <Head>
         <title>{post.title}</title>
         <meta property="og:title" content="Eric Quelch's Blog" key="title" />
-        <meta content={post.title} description={post.description} />
+        <meta name="description" content={post.description} />
       </Head>
       <AOS animation="fade-up" duration="1000" delay="500">
         <div
