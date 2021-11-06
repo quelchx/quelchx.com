@@ -9,6 +9,10 @@
   transform: scale(3);
 }
 
+.is-nav-icon {
+  transform: scale(1.5)
+}
+
 @media (max-width: 700px) {
   #hero-svg {
     transform: translate(10%);

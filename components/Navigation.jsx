@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { routes } from "@/routes";
 
 export default function Navigation() {
   const [toggle, setToggle] = useState(false);
@@ -15,33 +14,35 @@ export default function Navigation() {
       theme.className = "dark";
       setToggle(false);
     }
-  };
-
-  const router = routes.map((route) => {
-    return (
-      <div
-        key={route.name}
-        className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700"
-      >
-        <Link href={route.path}>{route.name}</Link>
-      </div>
-    );
-  });
+  }
 
   return (
     <section className="w-full px-8 dark:text-white dark:bg-gray-700 text-gray-700 bg-white">
       <div className="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
         <div className="relative flex flex-col md:flex-row">
-          <a
-            href="#_"
-            className="bounce flex items-center mb-5 font-medium   lg:w-auto lg:items-center lg:justify-center md:mb-0"
-          >
-            <span className="mx-auto text-xl font-black leading-none dark:text-white text-gray-900 select-none">
+          <div className="bounce flex items-center mb-5 font-medium   lg:w-auto lg:items-center lg:justify-center md:mb-0"></div>
+          <Link href="/">
+            <span className="hover:cursor-pointer mx-auto text-xl font-black leading-none dark:text-white text-gray-900 select-none">
               quelch<span className="dark:text-cyan-500 text-green-600">x</span>
             </span>
-          </a>
+          </Link>
+
           <nav className="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
-            {router}
+            <div className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
+              <Link href="/posts">
+                <i className="fab fa-blogger is-nav-icon"></i>
+              </Link>
+            </div>
+            <div className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
+              <a target="_blank" href="/posts">
+                <i className="fab fa-github-square is-nav-icon"></i>
+              </a>
+            </div>
+            <div className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
+              <a target="_blank" href="/posts">
+                <i className="fab fa-linkedin is-nav-icon"></i>
+              </a>
+            </div>
           </nav>
         </div>
         <div>
