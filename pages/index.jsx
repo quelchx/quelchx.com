@@ -31,7 +31,10 @@ export default function Home() {
                 </h2>
                 <p className="mt-2 text-xl text-left dark:text-gray-300 text-gray-900 border-0 border-gray-200 sm:text-2xl">
                   Looking for a developer? My services will help you maximize
-                  and boost your productivity.
+                  and boost your productivity. I know im no Linus Torvalds, Dennis Ritchie or
+                  Bill Gates, but I can bring motivation, passion and work hard.
+                  I may not be able to change the world but I can want to start
+                  somewhere.
                 </p>
               </div>
               <a

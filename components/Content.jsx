@@ -53,7 +53,7 @@ export default function Content() {
             </h2>
             <p className="pt-4 pb-8 m-0 leading-7 dark:text-gray-200 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
               Outside of my education im versitile and skilled with many
-              development frameworks and libraries.
+              development frameworks/libraries.
             </p>
             <ul className="p-0 m-0 leading-6 border-0 border-gray-300">
               <li className="shuffle box-border relative py-1 pl-0 text-left dark:text-gray-200 text-gray-500 border-solid">
@@ -66,13 +66,13 @@ export default function Content() {
                 <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
                   <span className="text-sm font-bold">✓</span>
                 </span>{" "}
-                Unique
+                Passionate
               </li>
               <li className="shuffle box-border relative py-1 pl-0 text-left dark:text-gray-200 text-gray-500 border-solid">
                 <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full">
                   <span className="text-sm font-bold">✓</span>
                 </span>{" "}
-                Leader
+                Motivator
               </li>
             </ul>
           </AOS>
