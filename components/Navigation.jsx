@@ -5,7 +5,7 @@ export default function Navigation() {
   const toggleTheme = () => {
     let theme = document.getElementById("theme");
 
-    if (theme.className === 'dark') {
+    if (theme.className === "dark") {
       theme.className = "light";
       localStorage.setItem("theme", "light");
     } else {
@@ -30,12 +30,15 @@ export default function Navigation() {
               <Link href="/posts">Blog</Link>
             </div>
             <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
-              <a target="_blank" href="/posts">
+              <a target="_blank" href="https://github.com/quelchx">
                 Github
               </a>
             </div>
             <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
-              <a target="_blank" href="/posts">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEXA_gvDoYhwwAAAX0LWPjAXFBRMlWVhGrf8RhVYW7Cszs8BOzR-clkcNZitlgufNBEYunms4B2H1bvMTGPL5Vlwr5BkA-Lie6ReuupqqMRM8SoWt_O0sWlIweKIAYSNwIk34k=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fca.linkedin.com%2Fin%2Feric-quelch-768861201"
+              >
                 Linkedin
               </a>
             </div>
