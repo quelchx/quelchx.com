@@ -10,6 +10,11 @@ import { useEffect } from "react";
 
 function Application({ Component, pageProps }) {
   useEffect(() => {
+    const theme = localStorage.getItem('theme')
+    document.getElementById('theme').className = theme
+    if (theme === 'light') {
+      document.getElementById('checkbox').checked = true
+    }
     AOS.init();
     AOS.refresh();
   }, []);

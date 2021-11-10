@@ -2,19 +2,17 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 export default function Navigation() {
-  const [toggle, setToggle] = useState(false);
-
   const toggleTheme = () => {
     let theme = document.getElementById("theme");
 
-    if (!toggle) {
+    if (theme.className === 'dark') {
       theme.className = "light";
-      setToggle(true);
+      localStorage.setItem("theme", "light");
     } else {
       theme.className = "dark";
-      setToggle(false);
+      localStorage.setItem("theme", "dark");
     }
-  }
+  };
 
   return (
     <section className="w-full px-8 dark:text-white dark:bg-gray-700 text-gray-700 bg-white">
@@ -29,13 +27,11 @@ export default function Navigation() {
 
           <nav className="flex flex-wrap items-center mt-2 md:mt-0 mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
             <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
-              <Link href="/posts">
-                Blog
-              </Link>
+              <Link href="/posts">Blog</Link>
             </div>
             <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
               <a target="_blank" href="/posts">
-               Github
+                Github
               </a>
             </div>
             <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
@@ -53,6 +49,7 @@ export default function Navigation() {
                 <input
                   onClick={toggleTheme}
                   type="checkbox"
+                  id="checkbox"
                   className="sr-only"
                 />
                 <div className="block bg-gray-600 w-14 h-8 rounded"></div>
