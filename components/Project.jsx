@@ -16,7 +16,6 @@ export default function Project({ details, path, image, name }) {
             {details}
           </p>
         </div>
-
         <p className="pl-12 mt-3 text-sm font-medium leading-5 dark:text-green-300 text-gray-800 truncate sm:text-base lg:text-base">
           {name}
           <span className="mt-1 text-sm leading-5 text-gray-500 dark:text-green-400 truncate">
