@@ -27,20 +27,20 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <nav className="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
-            <div className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
+          <nav className="flex flex-wrap items-center mt-2 md:mt-0 mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
+            <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
               <Link href="/posts">
-                <i className="fab fa-blogger is-nav-icon"></i>
+                Blog
               </Link>
             </div>
-            <div className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
+            <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
               <a target="_blank" href="/posts">
-                <i className="fab fa-github-square is-nav-icon"></i>
+               Github
               </a>
             </div>
-            <div className="switch-decoration mr-5 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
+            <div className="switch-decoration mr-3 font-medium leading-6 dark:text-white dark:hover:text-cyan-500 text-gray-600 hover:text-green-700">
               <a target="_blank" href="/posts">
-                <i className="fab fa-linkedin is-nav-icon"></i>
+                Linkedin
               </a>
             </div>
           </nav>
