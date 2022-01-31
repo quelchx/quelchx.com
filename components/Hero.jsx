@@ -18,7 +18,7 @@ export default function Hero() {
                 return (
                   <ColorHighlight
                     key={guid()}
-                    animationDuration={i + 1}
+                    animationDuration={1}
                     color={data.colors[i]}
                   >
                     <AnimateOnScroll animation="fade-right" delay={i * 200}>
