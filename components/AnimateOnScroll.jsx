@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AOS({
+export default function AnimateOnScroll({
   children,
   animation,
   easing,
@@ -10,7 +10,7 @@ export default function AOS({
   delay,
   anchor,
 }) {
-  AOS.defaultProps = {
+  AnimateOnScroll.defaultProps = {
     animation: "fade-in",
     easing: "ease-in-out",
     mirror: true,
