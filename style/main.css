@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./animations.css";
-@import "./theme.css";
+@import "../node_modules/hover.css/css/hover-min.css";
+
+.is-button:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
+}
+
+.avatar {
+  padding-left: 110px;
+}
+
+.Typewriter__wrapper {
+  font-family: monospace !important;
+}
 
 .is-icon {
   transform: scale(3);
@@ -13,19 +25,69 @@
   transform: scale(1.5);
 }
 
-@media (max-width: 700px) {
-  #hero-svg {
-    transform: translate(10%);
-    height: 400px;
-    width: 400px;
+/* @apply doesn't work + assigning them in assets.js as tailwindcss classes doesn't work either */
+.sass-icon,
+._pink {
+  color: #be185d;
+}
+
+.react-icon,
+._blue {
+  color: #2563eb;
+}
+
+.vue-icon,
+._green {
+  color: #059669;
+}
+
+.angular-icon,
+._red {
+  color: #dc2626;
+}
+
+.uikit-icon,
+._yellow {
+  color: #fbbf24;
+}
+
+.polygot-icon,
+._orange {
+  color: #b45309;
+}
+
+.server-icon,
+._grey {
+  color: #4b5563;
+}
+
+.cms-icon,
+._indego {
+  color: #4338ca;
+}
+
+body .dark {
+  background-color: #1f2937;
+}
+
+body .light {
+  background-color: #f3f4f6;
+}
+
+.dark strong {
+  color: white !important;
+}
+
+@media (max-width: 900px) {
+  .avatar {
+    padding-left: 80px;
   }
 }
 
-@media (max-width: 500px) {
-  #hero-svg {
-    transform: translate(13%);
-    height: 350px;
-    width: 350px;
+@media (max-width: 700px) {
+  .avatar {
+    padding-left: 60px;
+    padding-top: 20px;
   }
 }
 
@@ -33,11 +95,6 @@
   input,
   textarea {
     @apply block w-full;
-  }
-
-  input:checked ~ .dot {
-    transform: translateX(100%);
-    @apply bg-gray-800;
   }
 
   code {
@@ -53,38 +110,33 @@
   }
 
   .dark pre code {
-    @apply text-cyan-500;
+    @apply text-pink-600;
+  }
+
+  .dark pre {
+    @apply bg-gray-200;
   }
 
   pre {
     @apply bg-gray-900 text-sm 
     overflow-x-auto p-6 rounded-lg;
   }
-
-  .markdown strong {
-    @apply text-gray-700 text-3xl;
-  }
 }
 
 @layer components {
-  .navigation {
-    @apply flex flex-wrap items-center 
-    mb-5 text-base md:mb-0 md:pl-8 
-    md:ml-8 md:border-l md:border-gray-200;
+  .dark {
+    @apply bg-gray-900;
   }
 
-  .nav-link {
-    @apply mr-5 font-medium leading-6 
-    hover:border-b-2
-    text-gray-600 hover:text-green-900;
+  ._markdown_ h1 {
+    @apply text-2xl;
   }
 
-  .button {
-    @apply flex items-center px-6 py-3;
+  ._markdown_ p {
+    @apply space-y-10 my-4;
   }
 
-  .bg-card {
-    @apply absolute z-0 inset-0 
-    shadow-lg transform rounded-md m-3;
+  ._markdown_ h2 {
+    @apply text-xl;
   }
 }
