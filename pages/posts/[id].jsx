@@ -1,63 +1,84 @@
 import React from "react";
-import { allPosts } from ".contentlayer/data";
-import ContainerBlock from "@/components/Layout/ContainerBlock";
 import Link from "next/link";
-import Heading from "../../components/Heading";
+import Head from "next/head";
+import AOS from "@/components/AOS";
 import { marked } from "marked";
 
 export async function getStaticPaths() {
-  const paths = allPosts.map((_) => "/posts/" + _._raw.flattenedPath);
+  const res = await fetch(process.env.BLOG_API);
+  const data = await res.json();
+
+  const paths = data.map((item) => {
+    return { params: { id: item.id.toString() } };
+  });
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     paths,
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params }) {
-  const post = allPosts.find((_) => _._raw.flattenedPath === params.id);
-  return { props: { post } };
+export async function getStaticProps(context) {
+  const id = context.params.id;
+  const res = await fetch(`${process.env.BLOG_API}/${id}`);
+  const post = await res.json();
+
+  return {
+    props: {
+      post,
+    },
+  };
 }
 
-export default function PostPage({ post }) {
-  const content = marked.parse(post.body.html);
+export default function Post({ post }) {
+  const content = marked.parse(post.content);
   return (
-    <ContainerBlock
-      title={`A Developers Blog - ${post.title}`}
-      description={post.description}
-    >
-      <section className="p-10 mx-4">
-        <Heading title={post.title} />
-        {/* <h1 className="py-2 font-poppin font-bold text-2xl">{post.title}</h1> */}
-        <p className="py-2 leading-4 tracking-wide">
-          Posted: {new Date(post.date).toDateString()}
-        </p>
+    <div className="dark:bg-gray-800 bg-gray-200 is-article">
+      <Head>
+        <title>{post.title}</title>
+        <meta property="og:title" content="Eric Quelch's Blog" key="title" />
+        <meta name="description" content={post.description} />
+      </Head>
+      <AOS animation="fade-up" duration="1000" delay="500">
         <div
-          className="my-2 _markdown_"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-        <div className="inline-flex pt-2 rounded-md shadow-sm" role="group">
-          <button
-            type="button"
-            className="hvr-reveal py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-          >
-            <a href="#top">Top</a>
-          </button>
-          <Link href="/">
-            <button
-              type="button"
-              className="hvr-rectangle-out py-2 px-4 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-            >
-              <a>Home</a>
+          id="top"
+          className="container relative w-full md:max-w-3xl mx-auto pt-20"
+        >
+          <div className="w-full overflow-x-auto relative z-40 px-4 md:px-6 text-xl dark:text-white text-gray-800 leading-normal">
+            <div className="switch-decoration text-base md:text-sm dark:text-cyan-400 hover:text-green-800 text-gray-600 mt-2 border-cyan-900 font-bold no-underline">
+              <Link href="/posts">Back To Blogs</Link>
+            </div>
+            <AOS animation="fade-right" delay="700" duration="500">
+              <h1 className="font-bold font-sans break-normal dark:text-white text-gray-900 pt-4 pb-2 text-3xl md:text-4xl">
+                {post.title}
+              </h1>
+            </AOS>
+            <AOS animation="fade-down" delay="700" duration="500">
+              <p className="my-2 text-sm md:text-base font-normal text-gray-600 dark:text-cyan-400">
+                <span className="relative text-gray-700 text-lg font-bold dark:text-white">
+                  Published:{" "}
+                </span>{" "}
+                {new Date(post.createdAt).toUTCString()}
+              </p>
+            </AOS>
+            <AOS animation="zoom-in" duration="800" delay="300">
+              <div
+                className="py-2 space-y-6 markdown"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            </AOS>
+            <button className="my-10 bg-green-500 mx-auto p-2 rounded text-white">
+              <a href="#top">Back to top</a>
             </button>
-          </Link>
-          <button
-            type="button"
-            className="hvr-reveal py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-r-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-          >
-            <Link href="/posts">Blog</Link>
-          </button>
+          </div>
         </div>
-      </section>
-    </ContainerBlock>
+      </AOS>
+    </div>
   );
 }
