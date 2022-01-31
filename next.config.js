@@ -1,7 +1,6 @@
-const { withContentlayer } = require("next-contentlayer");
 const path = require("path");
 
-module.exports = withContentlayer()({
+module.exports = {
   i18n: {
     locales: ["en-US"],
     defaultLocale: "en-US",
@@ -16,4 +15,4 @@ module.exports = withContentlayer()({
     config.resolve.alias["@"] = path.resolve(__dirname);
     return config;
   },
-});
+};
