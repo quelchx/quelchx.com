@@ -1,6 +1,5 @@
 import data from "/constants/data";
 export default function Footer() {
-  console.log(data);
   return (
     <section className="text-gray-700 body-font">
       <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">

@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
         <div className="flex flex-wrap items-center spa sm:-mx-3">
           <div className="w-full md:w-1/2 md:px-3">
-            <RoughNotationGroup show={true}>
+            {/* <RoughNotationGroup show={true}>
               {data.highlights.map((highlight) => {
                 let i = data.highlights.indexOf(highlight);
                 return (
@@ -29,7 +29,20 @@ export default function Hero() {
                   </ColorHighlight>
                 );
               })}
-            </RoughNotationGroup>
+            </RoughNotationGroup> */}
+            {data.highlights.map((highlight) => {
+              let i = data.highlights.indexOf(highlight);
+              return (
+                <h1 className="text-4xl md:text-8xl flex font-bold text-gray-700 dark:text-white my-2">
+                  <span
+                    className="p-2"
+                    style={{ backgroundColor: data.colors[i] }}
+                  >
+                    <p className="font-monaco pt-2">{highlight}</p>
+                  </span>
+                </h1>
+              );
+            })}
           </div>
           <div className="w-full md:w-1/2 avatar">
             <div className="w-full h-auto overflow-hidden rounded-md sm:rounded-xl">
