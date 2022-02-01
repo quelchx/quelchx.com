@@ -33,14 +33,21 @@ export default function Hero() {
             {data.highlights.map((highlight) => {
               let i = data.highlights.indexOf(highlight);
               return (
-                <h1 className="text-4xl md:text-8xl flex font-bold text-gray-700 dark:text-white my-2">
-                  <span
-                    className="p-2"
-                    style={{ backgroundColor: data.colors[i] }}
-                  >
-                    <p className="font-monaco pt-2">{highlight}</p>
-                  </span>
-                </h1>
+                <AnimateOnScroll
+                  animation="fade-left"
+                  duration={i * 250}
+                  delay={i * 400}
+                  key={highlight}
+                >
+                  <h1 className="text-4xl md:text-8xl flex font-bold text-gray-700 dark:text-white my-2">
+                    <span
+                      className="p-2"
+                      style={{ backgroundColor: data.colors[i] }}
+                    >
+                      <p className="font-monaco pt-2">{highlight}</p>
+                    </span>
+                  </h1>
+                </AnimateOnScroll>
               );
             })}
           </div>
