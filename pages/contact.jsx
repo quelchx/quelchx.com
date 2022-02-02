@@ -94,7 +94,7 @@ export default function ContactPage() {
                       <input
                         name="name"
                         type="text"
-                        className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+                        className="block w-full text-gray-700 px-4 py-4 mt-2 text-xl placeholder-gray-900 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
                         placeholder="Enter Your Name"
                       />
                     </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                       <input
                         name="email"
                         type="text"
-                        className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+                        className="block text-gray-700 w-full px-4 py-4 mt-2 text-xl placeholder-gray-900 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
                         placeholder="Enter Your Email Address"
                       />
                     </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                       <textarea
                         name="message"
                         rows="10"
-                        className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+                        className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-900 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
                         placeholder="Message"
                       />
                     </div>

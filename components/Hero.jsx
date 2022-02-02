@@ -12,24 +12,6 @@ export default function Hero() {
       <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
         <div className="flex flex-wrap items-center spa sm:-mx-3">
           <div className="w-full md:w-1/2 md:px-3">
-            {/* <RoughNotationGroup show={true}>
-              {data.highlights.map((highlight) => {
-                let i = data.highlights.indexOf(highlight);
-                return (
-                  <ColorHighlight
-                    key={guid()}
-                    animationDuration={1}
-                    color={data.colors[i]}
-                  >
-                    <AnimateOnScroll animation="fade-right" delay={i * 200}>
-                      <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-white my-2">
-                        {highlight}
-                      </h1>
-                    </AnimateOnScroll>
-                  </ColorHighlight>
-                );
-              })}
-            </RoughNotationGroup> */}
             {data.highlights.map((highlight) => {
               let i = data.highlights.indexOf(highlight);
               return (
