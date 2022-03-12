@@ -1,7 +1,4 @@
 import React from "react";
-import { RoughNotationGroup } from "react-rough-notation";
-import ColorHighlight from "./ColorHighlight";
-import guid from "@/utils/uuid";
 import Typewriter from "typewriter-effect";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import data from "@/constants/data";
@@ -21,9 +18,9 @@ export default function Hero() {
                   delay={i * 400}
                   key={highlight}
                 >
-                  <h1 className="text-4xl md:text-8xl flex font-bold text-gray-700 dark:text-white my-2">
+                  <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
                     <span
-                      className="p-2"
+                      className=""
                       style={{ backgroundColor: data.colors[i] }}
                     >
                       <p className="font-monaco pt-2">{highlight}</p>

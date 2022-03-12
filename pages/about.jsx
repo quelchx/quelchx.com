@@ -1,5 +1,5 @@
 import ContainerBlock from "@/components/Layout/ContainerBlock";
-import Heading from "@/components/Heading";
+import data from "@/constants/data";
 
 export default function AboutPage() {
   return (
@@ -10,7 +10,20 @@ export default function AboutPage() {
       <div class="max-w-6xl pb-28 px-6 mx-auto lg:px-12">
         <section class="py-10">
           <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-            <Heading title="Who is Eric Quelch?" />
+            <div className="pl-4">
+              <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
+                <span
+                  style={{
+                    backgroundColor:
+                      data.colors[
+                        Math.floor(Math.random() * data.colors.length)
+                      ],
+                  }}
+                >
+                  <p className="font-monaco pt-2">My Journey</p>
+                </span>
+              </h1>
+            </div>
             <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               I'm a full stack web developer currently living in the London
               Ontario area. I have spent the last 4 years perfecting my craft

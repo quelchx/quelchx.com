@@ -1,12 +1,11 @@
 import React from "react";
-import Link from "next/link"
-;
+import Link from "next/link";
 import ContainerBlock from "@/components/Layout/ContainerBlock";
 import Asset from "@/components/Asset";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import assets from "@/constants/assets";
 import guid from "@/utils/uuid";
-import Heading from "@/components/Heading";
+import data from "@/constants/data";
 
 export default function ExperiencePage() {
   const listAssets = assets.map((asset) => {
@@ -29,7 +28,20 @@ export default function ExperiencePage() {
         <div className="max-w-6xl px-6 mx-auto border-solid lg:px-12">
           <div className="flex flex-col items-start leading-7 dark:text-white text-gray-900 border-0 border-gray-200 lg:items-center lg:flex-row">
             <div className="box-border flex-1 text-center border-solid sm:text-left">
-              <Heading title="Need a Boost?" />
+              <div className="pl-4">
+                <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
+                  <span
+                    style={{
+                      backgroundColor:
+                        data.colors[
+                          Math.floor(Math.random() * data.colors.length)
+                        ],
+                    }}
+                  >
+                    <p className="font-monaco pt-2">Experience</p>
+                  </span>
+                </h1>
+              </div>
               <p className="mt-2 text-xl text-left dark:text-gray-300 text-gray-900 border-0 border-gray-200 sm:text-2xl">
                 Looking for a developer? My services will help you maximize and
                 boost your productivity. I know im no Linus Torvalds, Dennis

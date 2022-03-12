@@ -1,6 +1,7 @@
 import ContainerBlock from "@/components/Layout/ContainerBlock";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import Heading from "../components/Heading";
+import data from "@/constants/data";
+
 export default function ContactPage() {
   return (
     <ContainerBlock
@@ -18,7 +19,13 @@ export default function ContactPage() {
                       <p className="mb-2 font-medium dark:text-white text-gray-700 uppercase">
                         Want to get in touch?
                       </p>
-                      <Heading title="Contact Me?" />
+                      <div className="pl-4">
+                        <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
+                          <span style={{ backgroundColor: data.colors[Math.floor(Math.random() * data.colors.length)] }}>
+                            <p className="font-monaco pt-2">Contact?</p>
+                          </span>
+                        </h1>
+                      </div>
                     </div>
                     <p className="text-2xl pt-4 text-gray-700 dark:text-gray-200">
                       If your interesting in leaving a message feel free to use
