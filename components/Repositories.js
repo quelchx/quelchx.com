@@ -1,5 +1,36 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-export default function Repositories({ repos }) {
+import { useEffect, useState } from "react";
+
+export default function Repositories() {
+  const [repos, setRepos] = useState(null);
+  const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(
+      `https://api.github.com/search/repositories?q=user:quelchx+sort:author-date-asc`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        let latest = data.items.slice(0, 10);
+        setRepos(latest);
+        setLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <div className="lds-facebook">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
+  }
+  if (!repos) return <p>No profile data</p>;
+
   return (
     <section className="py-20 bg-gray-300 dark:bg-gray-700">
       <div className="px-8 mx-auto max-w-7xl lg:px-16">
