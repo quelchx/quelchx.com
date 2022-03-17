@@ -28,7 +28,7 @@ export default function ExperiencePage() {
         <div className="max-w-6xl px-6 mx-auto border-solid lg:px-12">
           <div className="flex flex-col items-start leading-7 dark:text-white text-gray-900 border-0 border-gray-200 lg:items-center lg:flex-row">
             <div className="box-border flex-1 text-center border-solid sm:text-left">
-              <div className="pl-4">
+              <div>
                 <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
                   <span
                     style={{
