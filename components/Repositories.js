@@ -34,7 +34,7 @@ export default function Repositories() {
   if (!repos) return <p>No profile data</p>;
 
   return (
-    <section className="py-20 bg-gray-300 dark:bg-gray-700">
+    <section className="py-20 bg-gray-400 dark:bg-gray-700">
       <div className="px-8 mx-auto max-w-7xl lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-700 dark:text-white my-20 md:my-0 text-center lg:text-left">

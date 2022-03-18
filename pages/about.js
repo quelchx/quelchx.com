@@ -10,7 +10,7 @@ export default function AboutPage() {
       <div class="max-w-6xl pb-28 px-6 mx-auto lg:px-12">
         <section class="py-10">
           <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-            <div className="pl-4">
+            <div>
               <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
                 <span
                   style={{

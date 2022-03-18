@@ -19,7 +19,7 @@ export default function ContactPage() {
                       <p className="mb-2 font-medium dark:text-white text-gray-700 uppercase">
                         Want to get in touch?
                       </p>
-                      <div className="pl-4">
+                      <div>
                         <h1 className="text-4xl md:text-8xl flex font-bold text-gray-100 dark:text-white my-2">
                           <span style={{ backgroundColor: data.colors[Math.floor(Math.random() * data.colors.length)] }}>
                             <p className="font-monaco pt-2">Contact?</p>
