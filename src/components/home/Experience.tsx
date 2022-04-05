@@ -2,6 +2,7 @@ import data from "../../constants";
 import AOS from "../AOS";
 import Asset from "./helpers/Asset";
 import Link from "next/link";
+
 const Experience: React.FC = () => {
   const listAssets = data.assets.map((asset: any, idx: string | number) => {
     return (

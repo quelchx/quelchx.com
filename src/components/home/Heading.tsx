@@ -1,4 +1,5 @@
 import TypeWriter from "typewriter-effect";
+
 import AOS from "../AOS";
 import data from "../../constants";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 interface ProjectProps {
   details: string;
   path: string;
@@ -29,12 +28,12 @@ const Project: React.FC<ProjectProps> = ({ details, path, image, name }) => {
           </span>
         </p>
       </div>
-      <Image
+      <img
         className="flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"
         src={image}
         alt={name}
-        width={80}
-        height={80}
+        width='auto'
+        height='auto'
       />
     </blockquote>
   );
