@@ -40,14 +40,14 @@ const Repositories = () => {
         </h1>
         <a
           href={`https://github.com/quelchx`}
-          className="flex flex-row items-center px-6 py-4 mb-20 space-x-4 text-xl font-semibold text-white bg-gray-900 rounded-md shadow-lg is-button md:mb-0 dark:text-gray-700 dark:bg-white"
+          className="flex flex-row items-center px-6 py-4 mb-20 space-x-4 text-xl font-semibold text-white bg-gray-900 rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0 dark:text-gray-700 dark:bg-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
             fill="currentColor"
-            className="bi bi-arrow-up-right-square"
+            className="bi bi-arrow-up-right-square hvr-buzz-out"
             stroke="4"
             strokeWidth="4"
             viewBox="0 0 16 16"

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../../node_modules/hover.css/css/hover-min.css";
+
+
 html,
 body {
   padding: 0;

@@ -47,8 +47,8 @@ const Repo: React.FC<RepoProps> = ({ repo }) => {
           href={repo.clone_url}
           className="flex flex-row items-center w-full space-x-2 font-semibold group"
         >
-          <p>View Repository </p>
-          <div className="pt-1 transition duration-300 transform group-hover:translate-x-2">
+          <p className="hvr-wobble-bottom">View Repository </p>
+          <div className="pt-1 hvr-forward">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

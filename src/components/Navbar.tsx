@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     return routes.map((route, idx) => {
       return (
         <Link href={route.path} key={idx}>
-          <a className="text-base font-normal text-gray-700 dark:text-white">
+          <a className="text-base font-normal text-gray-700 hvr-buzz-out dark:text-white">
             {route.name}
             {router.asPath === route.path && (
               <span>
