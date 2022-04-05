@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/functions": "^1.0.0",
     "@ts-stack/markdown": "^1.4.0",
     "aos": "^2.3.4",
     "gray-matter": "^4.0.3",
@@ -16,10 +17,10 @@
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typewriter-effect": "^2.18.2"
+    "typewriter-effect": "^2.18.2",
+    "@netlify/plugin-nextjs": "^3.9.2"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^3.9.2",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.3.4",
     "@types/aos": "^3.0.4",
