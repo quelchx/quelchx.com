@@ -18,10 +18,10 @@ type Posts = {
 };
 
 interface BlogProps {
-  posts?: Posts[];
+  posts: Posts[];
 }
 
-const Blog: NextPage<BlogProps> = ({ posts }: { posts: any }) => {
+const Blog: NextPage<BlogProps> = ({ posts }) => {
   return (
     <MetaContainer
       title="Developer Blog"

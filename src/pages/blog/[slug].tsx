@@ -15,7 +15,7 @@ interface PostPageProps {
   slug: any | undefined;
 }
 
-const PostPage: NextPage<PostPageProps> = ({ data, content, slug }) => {
+const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
   let markup = Marked.parse(content);
   return (
     <MetaContainer title={data.title} description={data.excerpt}>
