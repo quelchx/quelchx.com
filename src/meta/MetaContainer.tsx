@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 interface MetaContainerProps {
   children: React.ReactNode;

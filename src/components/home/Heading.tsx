@@ -1,5 +1,5 @@
 import TypeWriter from "typewriter-effect";
-import AOS from "../../components/AOS";
+import AOS from "../AOS";
 import data from "../../constants";
 
 const Heading: React.FC = () => {

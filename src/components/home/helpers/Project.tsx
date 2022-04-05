@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 interface ProjectProps {
   details: string;
   path: string;
@@ -25,18 +25,16 @@ const Project: React.FC<ProjectProps> = ({ details, path, image, name }) => {
         </div>
         <p className="pl-10 mt-2 text-sm font-medium leading-5 text-gray-800 truncate dark:text-white sm:text-base lg:text-base">
           <span className="mx-2 text-sm leading-5 text-gray-500 truncate dark:text-gray-200">
-            <a href={path} target="_blank">
-              {name}
-            </a>
+            <a href={path}>{name}</a>
           </span>
         </p>
       </div>
-      <img
+      <Image
         className="flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"
         src={image}
         alt={name}
-        width="auto"
-        height="auto"
+        width={80}
+        height={80}
       />
     </blockquote>
   );

@@ -17,7 +17,6 @@ const Footer: React.FC = () => {
         <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
           <a
             href={data.social.github}
-            target="_blank"
             className="text-gray-400 hvr-buzz hover:text-gray-500"
           >
             <span className="sr-only">GitHub</span>
@@ -37,7 +36,6 @@ const Footer: React.FC = () => {
 
           <a
             href={data.social.twitter}
-            target="_blank"
             className="text-gray-400 hvr-buzz hover:text-gray-500"
           >
             <svg
@@ -51,7 +49,6 @@ const Footer: React.FC = () => {
           </a>
 
           <a
-            target="_blank"
             href={data.social.linkedin}
             className="text-gray-400 hvr-buzz hover:text-gray-500"
           >

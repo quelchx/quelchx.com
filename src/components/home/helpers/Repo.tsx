@@ -44,7 +44,6 @@ const Repo: React.FC<RepoProps> = ({ repo }) => {
           </p>
         </div>
         <a
-          target="_blank"
           href={repo.clone_url}
           className="flex flex-row items-center w-full space-x-2 font-semibold group"
         >

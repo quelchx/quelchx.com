@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
         <div className="flex flex-row items-center space-x-4">
           <a
             href={data.social.github}
-            target="_blank"
+            
             className="text-base font-normal text-gray-700 hvr-buzz dark:text-gray-300"
           >
             <svg
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
           </a>
           <a
             href={data.social.twitter}
-            target="_blank"
+
             className="text-base font-normal text-gray-700 hvr-buzz dark:text-gray-300"
           >
             <svg
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
           </a>
           <a
             href={data.social.linkedin}
-            target="_blank"
+     
             className="text-base font-normal text-gray-700 hvr-buzz dark:text-gray-300"
           >
             <svg
