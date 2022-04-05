@@ -1,6 +1,5 @@
-const path = require("path");
-
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   i18n: {
     locales: ["en-US"],
     defaultLocale: "en-US",
@@ -11,8 +10,7 @@ module.exports = {
       },
     ],
   },
-  webpack: (config) => {
-    config.resolve.alias["@"] = path.resolve(__dirname);
-    return config;
-  },
+  reactStrictMode: true,
 };
+
+module.exports = nextConfig;

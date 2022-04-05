@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.is-icon {
+  transform: scale(3);
+}
+
+.is-nav-icon {
+  transform: scale(1.5);
+}
+
+.sass-icon {
+  color: #be185d;
+}
+
+.react-icon {
+  color: #2563eb;
+}
+
+.vue-icon {
+  color: #059669;
+}
+
+.angular-icon {
+  color: #dc2626;
+}
+
+.uikit-icon {
+  color: #fbbf24;
+}
+
+.polygot-icon {
+  color: #b45309;
+}
+
+.server-icon {
+  color: #4b5563;
+}
+
+.cms-icon {
+  color: #4338ca;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #059669;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@layer components {
+  .md code,
+  .md kbd,
+  .md pre,
+  .md samp {
+    @apply font-mono text-sm;
+  }
+
+  .md p {
+    @apply py-2;
+  }
+
+  .md h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply py-2;
+  }
+
+  .md h1 {
+    @apply text-3xl;
+  }
+
+  .md h2 {
+    @apply text-xl;
+  }
+
+  .md h3 {
+    @apply text-lg;
+  }
+
+  .md h4,
+  h5,
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  .md {
+    @apply break-all;
+  }
+
+  .md pre {
+    @apply px-2 py-4 my-2 overflow-x-scroll bg-gray-300 dark:bg-gray-800;
+  }
+
+  .md pre code {
+    @apply text-blue-800 dark:text-blue-300;
+  }
+}
