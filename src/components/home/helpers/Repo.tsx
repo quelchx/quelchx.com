@@ -8,9 +8,9 @@ interface RepoProps {
 const Repo: React.FC<RepoProps> = ({ repo }) => {
   return (
     <AOS key={repo.id} animation="fade-up" delay="300" duration="500">
-      <h5 className="mt-4 mb-2 font-semibold text-gray-900 dark:text-gray-300">
+      <p className="mt-4 mb-2 font-semibold text-gray-900 dark:text-gray-300">
         {repo.name.toUpperCase()}
-      </h5>
+      </p>
       <p className="text-gray-800 dark:text-gray-200">{repo.description}</p>
       <div className="flex flex-row gap-3 py-2">
         <div className="flex flex-row hvr-pulse">
@@ -19,7 +19,7 @@ const Repo: React.FC<RepoProps> = ({ repo }) => {
             width="20"
             height="20"
             viewBox="0 0 24 24"
-            fill="white"
+            fill="currentColor"
           >
             <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" />
           </svg>

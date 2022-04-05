@@ -17,11 +17,11 @@ const Heading: React.FC = () => {
                 delay={i * 400}
                 key={highlight}
               >
-                <h1 className="flex my-2 text-3xl font-bold text-gray-100 sm:text-5xl lg:text-8xl md:text-7xl dark:text-white">
+                <p className="flex my-2 text-3xl font-bold text-gray-100 sm:text-5xl lg:text-8xl md:text-7xl dark:text-white">
                   <span style={{ backgroundColor: data.colors[i] }}>
                     <p className="pt-2">{highlight}</p>
                   </span>
-                </h1>
+                </p>
               </AOS>
             );
           })}
@@ -30,6 +30,9 @@ const Heading: React.FC = () => {
           <div className="w-full h-auto overflow-hidden rounded-md sm:rounded-xl">
             <AOS delay="200" duration="300" animation="fade-down">
               <img
+                width="auto"
+                height="auto"
+                alt='avatar'
                 src={data.social.avatar}
                 className="rounded-full shadow hover:animate-pulse"
               />
