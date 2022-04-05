@@ -33,8 +33,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
           />
-
-         
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css"
+          />
+          <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
         </Head>
         <body className="font-ubuntu">
           <Main />

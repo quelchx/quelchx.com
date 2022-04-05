@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="container max-w-6xl px-4 py-2 mx-auto md:py-6">
+    <div id="top" className="container max-w-6xl px-4 py-2 mx-auto md:py-6">
       <div className="flex items-center justify-between md:flex-row">
         <div className="flex flex-col">
           <Link href="/">

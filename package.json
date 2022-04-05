@@ -11,10 +11,11 @@
   "dependencies": {
     "@netlify/functions": "^1.0.0",
     "@netlify/plugin-nextjs": "^3.9.2",
-    "hover.css": "^2.3.2",
     "@ts-stack/markdown": "^1.4.0",
     "aos": "^2.3.4",
+    "flowbite": "^1.4.1",
     "gray-matter": "^4.0.3",
+    "hover.css": "^2.3.2",
     "next": "latest",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
