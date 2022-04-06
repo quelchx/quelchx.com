@@ -10,7 +10,12 @@ import MetaContainer from "../../meta/MetaContainer";
 import AOS from "../../components/AOS";
 
 interface PostPageProps {
-  data: any;
+  data: {
+    title: string;
+    excerpt: string;
+    date: string;
+    cover_image: string;
+  };
   content: any;
   slug: any | undefined;
 }
@@ -18,7 +23,11 @@ interface PostPageProps {
 const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
   let markup = Marked.parse(content);
   return (
-    <MetaContainer title={data.title} description={data.excerpt} image={data.cover_image}>
+    <MetaContainer
+      title={data.title}
+      description={data.excerpt}
+      image={data.cover_image}
+    >
       <div className="mx-10 my-12">
         <div className="mt-4">
           <AOS animation="fade-left">
