@@ -8,16 +8,12 @@ import Link from "next/link";
 
 import MetaContainer from "../../meta/MetaContainer";
 import AOS from "../../components/AOS";
+import { Post } from "../../types";
 
 interface PostPageProps {
-  data: {
-    title: string;
-    excerpt: string;
-    date: string;
-    cover_image: string;
-  };
-  content: any;
-  slug: any | undefined;
+  data: Post;
+  content: string;
+  slug: string;
 }
 
 const PostPage: NextPage<PostPageProps> = ({ data, content }) => {

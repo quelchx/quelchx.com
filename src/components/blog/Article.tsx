@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Article } from "../../types";
+import { Blog } from "../../types";
 
 interface ArticleProps {
-  article: Article;
+  article: Blog;
 }
 
 const Article: React.FC<ArticleProps> = ({ article }) => {

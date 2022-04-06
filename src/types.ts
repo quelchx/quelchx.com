@@ -1,17 +1,11 @@
-export interface Article {
+export interface Blog {
   slug: string;
-  data: {
-    title: string;
-    date: string;
-    excerpt: string;
-    cover_image: string;
-  };
+  data: Post;
 }
 
-export interface Posts {
+export interface Post {
   title: string;
-  slug: string;
-  image_cover: string;
-  date: string;
   excerpt: string;
+  date: string;
+  cover_image: string;
 }

@@ -1,17 +1,15 @@
-// @ts-ignore
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 import type { GetStaticProps, NextPage } from "next";
 
 import MetaContainer from "../meta/MetaContainer";
-// import Link from "next/link";
 import BlogHeading from "../components/blog/BlogHeading";
 import AOS from "../components/AOS";
 import Article from "../components/blog/Article";
-import { Posts } from "../types";
+import { Blog } from "../types";
 interface BlogProps {
-  posts: Posts[];
+  posts: Blog[];
 }
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
@@ -26,9 +24,9 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             <BlogHeading />
           </AOS>
           <div className="grid grid-cols-1 gap-0 my-6 md:grid-cols-2 md:gap-16">
-            {posts.map((post: any, idx: string | number) => {
+            {posts.map((post: Blog) => {
               return (
-                <div key={idx} className="px-6 ">
+                <div key={post.slug} className="px-6 ">
                   <AOS animation="fade-up">
                     <Article article={post} />
                   </AOS>
