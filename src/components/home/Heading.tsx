@@ -17,11 +17,11 @@ const Heading: React.FC = () => {
                 delay={i * 400}
                 key={highlight}
               >
-                <p className="flex my-2 text-3xl font-bold text-gray-100 sm:text-5xl lg:text-8xl md:text-7xl dark:text-white">
+                <div className="flex my-2 text-3xl font-bold text-gray-100 sm:text-5xl lg:text-8xl md:text-7xl dark:text-white">
                   <span style={{ backgroundColor: data.colors[i] }}>
                     <p className="pt-2">{highlight}</p>
                   </span>
-                </p>
+                </div>
               </AOS>
             );
           })}

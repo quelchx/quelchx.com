@@ -5,18 +5,11 @@ import path from "path";
 import type { GetStaticProps, NextPage } from "next";
 
 import MetaContainer from "../meta/MetaContainer";
-import Link from "next/link";
+// import Link from "next/link";
 import BlogHeading from "../components/blog/BlogHeading";
 import AOS from "../components/AOS";
-
-type Posts = {
-  title: string;
-  slug: string;
-  image_cover: string;
-  date: string;
-  excerpt: string;
-};
-
+import Article from "../components/blog/Article";
+import { Posts } from "../types";
 interface BlogProps {
   posts: Posts[];
 }
@@ -35,18 +28,9 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
           <div className="grid grid-cols-1 gap-0 my-6 md:grid-cols-2 md:gap-16">
             {posts.map((post: any, idx: string | number) => {
               return (
-                <div key={idx} className="flex flex-col justify-center px-6">
+                <div key={idx} className="px-6 ">
                   <AOS animation="fade-up">
-                    <h5 className="font-semibold ">{post.data.title}</h5>
-                    <p>{post.data.excerpt}</p>
-                    <p className="mt-1">Posted: {post.data.date}</p>
-                    <div className="py-4">
-                      <Link href={`/blog/${post.slug}`}>
-                        <a className="px-5 py-2.5 mr-2 rounded mb-2 text-center text-white bg-blue-500">
-                          Read More
-                        </a>
-                      </Link>
-                    </div>
+                    <Article article={post} />
                   </AOS>
                 </div>
               );
