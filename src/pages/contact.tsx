@@ -7,7 +7,7 @@ import Form from "../components/contact/Form";
 
 const Contact: NextPage = () => {
   return (
-    <MetaContainer title="Eric Quelch - Contact">
+    <MetaContainer title="Contact - Eric Quelch" description='Contact Eric Quelch'>
       <section className="w-full">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row">

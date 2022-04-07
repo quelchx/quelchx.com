@@ -7,7 +7,7 @@ import data from "../constants";
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
   const router = useRouter();
