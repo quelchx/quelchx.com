@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 
 import { useEffect } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps | any) {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider defaultTheme="light" attribute="class">
-      {/* @ts-ignore */}
       <Component {...pageProps} />
     </ThemeProvider>
   );
