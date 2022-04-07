@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider defaultTheme="light" attribute="class">
+      {/* @ts-ignore */}
       <Component {...pageProps} />
     </ThemeProvider>
   );
