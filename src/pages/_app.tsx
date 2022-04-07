@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 
 import { useEffect } from "react";
 
-function MyApp({ Component, pageProps }: AppProps | any) {
+function Application({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -20,4 +20,4 @@ function MyApp({ Component, pageProps }: AppProps | any) {
   );
 }
 
-export default MyApp;
+export default Application;
