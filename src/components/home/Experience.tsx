@@ -3,14 +3,17 @@ import AOS from "../AOS";
 import Asset from "./helpers/Asset";
 import Link from "next/link";
 
-const Experience: React.FC = () => {
-  const listAssets = data.assets.map((asset: any, idx: string | number) => {
+import { Asset as Assets } from "../../types";
+
+const Experience: React.FC<Assets> = () => {
+  const listAssets = data.assets.map((asset, idx: any) => {
+    console.log(asset);
     return (
       <Asset
         key={idx}
         icon={asset.icon}
-        asset={asset.name}
-        details={asset.text}
+        asset={asset.asset}
+        details={asset.details}
       />
     );
   });

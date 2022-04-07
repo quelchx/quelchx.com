@@ -4,6 +4,7 @@ import data from "../constants";
 const Footer: React.FC = () => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
+  
   useEffect(() => {
     setMounted(true);
   }, []);

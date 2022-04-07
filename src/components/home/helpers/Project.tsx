@@ -1,12 +1,7 @@
 import React from "react";
-interface ProjectProps {
-  details: string;
-  path: string;
-  image: string;
-  name: string;
-}
+import { Project } from "../../../types";
 
-const Project: React.FC<ProjectProps> = ({ details, path, image, name }) => {
+const Project: React.FC<Project> = ({ details, path, image, name }) => {
   return (
     <blockquote className="flex items-center justify-between w-full col-span-1 p-6 bg-white rounded-lg shadow dark:bg-gray-700">
       <div className="flex flex-col pr-8">

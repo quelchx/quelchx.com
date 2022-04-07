@@ -2,26 +2,25 @@ import React from "react";
 import data from "../../constants";
 import AOS from "../AOS";
 import Project from "./helpers/Project";
+import { Project as ProjectProps } from "../../types";
 
-const Projects: React.FC = () => {
-  const listProjects = data.projects.map(
-    (project: any, idx: string | number) => {
-      return (
-        <div key={idx}>
-          <AOS animation="zoom-in" duration="500" delay="300">
-            <div className="mb-4">
-              <Project
-                name={project.name}
-                image={project.image}
-                details={project.details}
-                path={project.path}
-              />
-            </div>
-          </AOS>
-        </div>
-      );
-    }
-  );
+const Projects: React.FC<ProjectProps> = () => {
+  const listProjects = data.projects.map((project, idx: any) => {
+    return (
+      <div key={idx}>
+        <AOS animation="zoom-in" duration="500" delay="300">
+          <div className="mb-4">
+            <Project
+              name={project.name}
+              image={project.image}
+              details={project.details}
+              path={project.path}
+            />
+          </div>
+        </AOS>
+      </div>
+    );
+  });
 
   return (
     <AOS>

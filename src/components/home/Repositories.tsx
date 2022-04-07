@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Repo from "./helpers/Repo";
 
-const Repositories = () => {
+const Repositories: React.FC = () => {
   const [repos, setRepos] = useState<any>(null);
   const [isLoading, setLoading] = useState<boolean>(false);
 
@@ -62,7 +62,7 @@ const Repositories = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-0 mt-6 text-gray-600 dark:text-gray-200 md:grid-cols-2 md:gap-8">
-        {repos.map((repo: Object[], idx: number | string) => {
+        {repos.map((repo: Object[], idx: any) => {
           return <Repo key={idx} repo={repo} />;
         })}
       </div>
