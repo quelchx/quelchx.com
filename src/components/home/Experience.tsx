@@ -2,18 +2,21 @@ import data from "../../constants";
 import AOS from "../AOS";
 import Asset from "./helpers/Asset";
 import Link from "next/link";
+import { Asset as AssetType } from "../../types";
 
 const Experience: React.FC = () => {
-  const listAssets = data.assets.map((asset: any, idx: string | number) => {
-    return (
-      <Asset
-        key={idx}
-        icon={asset.icon}
-        asset={asset.name}
-        details={asset.text}
-      />
-    );
-  });
+  const listAssets = data.assets.map(
+    (asset: AssetType, idx: string | number) => {
+      return (
+        <Asset
+          key={idx}
+          icon={asset.icon}
+          asset={asset.asset}
+          details={asset.details}
+        />
+      );
+    }
+  );
   return (
     <>
       <div className="max-w-6xl px-6 pb-10 mx-auto rounded solid lg:px-12">

@@ -1,11 +1,12 @@
 import React from "react";
 import data from "../../constants";
+import { Project as ProjectType } from "../../types";
 import AOS from "../AOS";
 import Project from "./helpers/Project";
 
 const Projects: React.FC = () => {
   const listProjects = data.projects.map(
-    (project: any, idx: string | number) => {
+    (project: ProjectType, idx: string | number) => {
       return (
         <div key={idx}>
           <AOS animation="zoom-in" duration="500" delay="300">
