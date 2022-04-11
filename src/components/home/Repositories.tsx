@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Repo from "./helpers/Repo";
 
-const Repositories: React.FC = () => {
+const Repositories = (): JSX.Element => {
   const [repos, setRepos] = useState<any>(null);
   const [isLoading, setLoading] = useState<boolean>(false);
 

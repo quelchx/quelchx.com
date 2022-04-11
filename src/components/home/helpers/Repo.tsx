@@ -5,7 +5,7 @@ interface RepoProps {
   [repo: string]: any;
 }
 
-const Repo: React.FC<RepoProps> = ({ repo }) => {
+const Repo = ({ repo }: RepoProps): JSX.Element => {
   return (
     <AOS key={repo.id} animation="fade-up" delay="300" duration="500">
       <p className="mt-4 mb-2 font-semibold text-gray-900 dark:text-gray-300">

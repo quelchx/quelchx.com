@@ -3,7 +3,7 @@ import TypeWriter from "typewriter-effect";
 import AOS from "../AOS";
 import data from "../../constants";
 
-const Heading: React.FC = () => {
+const Heading = (): JSX.Element => {
   return (
     <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
       <div className="flex flex-wrap items-center sm:-mx-4">
@@ -32,7 +32,7 @@ const Heading: React.FC = () => {
               <img
                 width="auto"
                 height="auto"
-                alt='avatar'
+                alt="avatar"
                 src={data.social.avatar}
                 className="rounded-full shadow hover:animate-pulse"
               />

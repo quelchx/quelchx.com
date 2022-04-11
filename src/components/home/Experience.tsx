@@ -4,7 +4,7 @@ import Asset from "./helpers/Asset";
 import Link from "next/link";
 import { Asset as AssetType } from "../../types";
 
-const Experience: React.FC = () => {
+const Experience = (): JSX.Element => {
   const listAssets = data.assets.map(
     (asset: AssetType, idx: string | number) => {
       return (

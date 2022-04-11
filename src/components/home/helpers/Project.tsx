@@ -1,7 +1,7 @@
 import React from "react";
 import { Project } from "../../../types";
 
-const Project: React.FC<Project> = ({ details, path, image, name }) => {
+const Project = ({ details, path, image, name }: Project): JSX.Element => {
   return (
     <blockquote className="flex items-center justify-between w-full col-span-1 p-6 bg-white rounded-lg shadow dark:bg-gray-700">
       <div className="flex flex-col pr-8">
@@ -27,8 +27,8 @@ const Project: React.FC<Project> = ({ details, path, image, name }) => {
         className="flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"
         src={image}
         alt={name}
-        width='auto'
-        height='auto'
+        width="auto"
+        height="auto"
       />
     </blockquote>
   );

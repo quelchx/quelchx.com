@@ -1,7 +1,7 @@
 import AOS from "../AOS";
 import data from "../../constants";
 
-const ContactHeading: React.FC = () => {
+const ContactHeading = (): JSX.Element => {
   return (
     <div className="flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl">
       <AOS animation="fade-up" delay="500">

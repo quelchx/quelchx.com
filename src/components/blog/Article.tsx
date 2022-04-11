@@ -5,10 +5,10 @@ interface ArticleProps {
   article: Blog;
 }
 
-const Article: React.FC<ArticleProps> = ({ article }) => {
+const Article = ({ article }: ArticleProps): JSX.Element => {
   return (
     <Link href={`/blog/${article.slug}`}>
-      <div className="rounded-lg cursor-pointer  dark:border-gray-700">
+      <div className="rounded-lg cursor-pointer dark:border-gray-700">
         <p className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {article.data.title}
         </p>

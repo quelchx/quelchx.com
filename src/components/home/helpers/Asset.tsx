@@ -1,7 +1,7 @@
 import React from "react";
 import { Asset } from "../../../types";
 
-const Asset: React.FC<Asset> = ({ icon, asset, details }) => {
+const Asset = ({ icon, asset, details }: Asset): JSX.Element => {
   return (
     <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
       <i className={icon + " is-icon"}></i>

@@ -4,7 +4,7 @@ import { Project as ProjectType } from "../../types";
 import AOS from "../AOS";
 import Project from "./helpers/Project";
 
-const Projects: React.FC = () => {
+const Projects = (): JSX.Element => {
   const listProjects = data.projects.map(
     (project: ProjectType, idx: string | number) => {
       return (

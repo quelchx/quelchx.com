@@ -1,6 +1,6 @@
 import InputField from "./helpers/InputField";
 
-const Form: React.FC = () => {
+const Form = (): JSX.Element => {
   return (
     <form
       method="POST"

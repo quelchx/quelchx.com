@@ -1,4 +1,4 @@
-const BlogHeading: React.FC = () => {
+const BlogHeading = (): JSX.Element => {
   return (
     <section className="py-20">
       <div className="container items-center max-w-6xl px-4 mx-auto sm:px-20 md:px-32 lg:px-16">
@@ -61,7 +61,6 @@ const BlogHeading: React.FC = () => {
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
-             
               viewBox="0 0 980 489.48047"
             >
               <path
