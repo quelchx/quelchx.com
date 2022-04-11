@@ -35,7 +35,7 @@ const data = {
     {
       asset: "Python and Django",
       details:
-        "Capable of building web application and RESTful API's using Python and Django",
+        "Capable of building web applications and RESTful API's using Python and Django",
       icon: "fab fa-python angular-icon",
     },
     {
