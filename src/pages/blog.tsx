@@ -24,10 +24,10 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             <BlogHeading />
           </AOS>
           <div className="grid grid-cols-1 gap-0 my-6 md:grid-cols-2 md:gap-16">
-            {posts.map((post: Blog) => {
+            {posts.reverse().map((post: Blog) => {
               return (
-                <div key={post.slug} className="px-6 ">
-                  <AOS animation="fade-up">
+                <div key={post.slug}>
+                  <AOS animation="fade-in">
                     <Article article={post} />
                   </AOS>
                 </div>
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      posts: posts,
+      posts,
     },
   };
 };
