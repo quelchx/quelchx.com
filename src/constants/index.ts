@@ -21,27 +21,27 @@ const data = {
   ],
   assets: [
     {
-      asset: "Vue.js",
-      details:
-        "Very Diverse with Vue.js and it's growing ecosystem. Well acquainted to frameworks and libraries such as Nuxt.js, Vuex, VuePress and much more.",
-      icon: "fab fa-vuejs vue-icon",
-    },
-    {
       asset: "React.js",
       details:
         "I absolutely love the React Ecosystem. Experienced with React and libraries such as Next.js, React Native and Expo",
       icon: "fab fa-react react-icon",
     },
     {
-      asset: "Angular.js",
+      asset: "Vue.js",
       details:
-        "Capable of building and scaling large industry leading web applications using TypeScript and Angular.js",
-      icon: "fab fa-angular angular-icon",
+        "Very Diverse with Vue.js and it's growing ecosystem. Well acquainted to frameworks and libraries such as Nuxt.js, Vuex, VuePress and much more.",
+      icon: "fab fa-vuejs vue-icon",
+    },
+    {
+      asset: "Python and Django",
+      details:
+        "Capable of building web application and RESTful API's using Python and Django",
+      icon: "fab fa-python angular-icon",
     },
     {
       asset: "Animations",
       details:
-        "Diversified with libraries such as GSAP and Three.js and vanilla CSS",
+        "Diversified with libraries such as GSAP and Three.js and more",
       icon: "fab fa-uikit uikit-icon",
     },
     {
@@ -59,7 +59,7 @@ const data = {
     {
       asset: "Backend Management",
       details:
-        "Accustomed to cross-platform, backend runtime enviroments such as Node.js. Strong grasp of Express, PHP, MongoDB, Firebase and more",
+        "Accustomed to cross-platform, backend runtime enviroments such as Node.js. Strong grasp of Express, PHP, MongoDB, Firebase, Django and more",
       icon: "fas fa-server server-icon",
     },
     {
