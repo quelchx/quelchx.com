@@ -1,6 +1,7 @@
 ---
 title: Get Started with Bulma CSS
 date: "December 13, 2020"
+category: ['CSS', 'Bulma'] 
 excerpt: If your familar with Bootstrap and want to try out something different Bulma is amazing.
 cover_image: "https://i.pinimg.com/originals/f3/c5/4f/f3c54f51a7cb9de02523e226d6b010b6.png"
 ---

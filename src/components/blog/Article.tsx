@@ -16,6 +16,19 @@ const Article = ({ article }: ArticleProps): JSX.Element => {
           {article.data.excerpt}
         </p>
         <small>Posted {article.data.date}</small>
+        <div className="flex py-2">
+        {article.data.category.map((el, idx) => {
+          return (
+            <span
+              key={idx}
+              className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+            >
+              {el}
+            </span>
+          );
+        })}
+        </div>
+        
       </span>
     </Link>
   );

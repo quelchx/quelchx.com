@@ -1,6 +1,7 @@
 ---
 title: What is the Array.prototype.flat() method in JavaScript?
 date: "April 12, 2022"
+category: ['JavaScript'] 
 excerpt: What is the flat() method, what can it do and why would be need it?
 cover_image: "https://coryrylan.com/assets/images/posts/types/javascript-800x800.png"
 ---

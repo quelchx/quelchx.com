@@ -8,6 +8,7 @@ export interface Post {
   excerpt: string;
   date: string;
   cover_image: string;
+  category: [string]
 }
 
 export interface Asset {

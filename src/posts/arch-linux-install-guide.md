@@ -1,6 +1,7 @@
 ---
 title: Installing Arch Linux With KDE Made Easy
 date: "March 12, 2021"
+category: ['Linux', 'Arch'] 
 excerpt: Installing Arch Linux is usually a nerve racking experience expecially if you never have done it. There is a lot of information out there, and can sometimes be intimidating. This guide should help you get Arch Linux installed and running step by step.
 cover_image: "https://cdn0.iconfinder.com/data/icons/flat-round-system/512/archlinux-512.png"
 ---
