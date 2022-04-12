@@ -15,15 +15,14 @@ interface BlogProps {
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
   const [articles, setArticles] = useState(posts);
+  const [category, setCategory] = useState("");
 
-  function filterByCategory(e: any) {
-    if (e.target.value === "All") {
-      setArticles(posts);
-    }
-
+  function filterByCategory(str: string) {
+    let target = str;
+ 
     articles.filter((val) => {
       val.data.category.filter((el) => {
-        if (el.toLowerCase().includes(e.target.value.toLowerCase())) {
+        if (el.toLowerCase().includes(target.toLowerCase())) {
           setArticles([val]);
         }
       });
@@ -50,13 +49,23 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
               </label>
               <select
                 id="posts"
-                onChange={(e) => filterByCategory(e)}
+                defaultValue={category}
+                onChange={() => filterByCategory(category)}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
-                <option defaultChecked>All</option>
-                {posts.map((post: Blog) => {
+                <option onClick={() => setArticles(posts)}>
+                  All
+                </option>
+                {articles.map((post: Blog) => {
                   return post.data.category.map((el) => {
-                    return <option key={el}>{el}</option>;
+                    return (
+                      <option
+                        onClick={(e: any) => setCategory(e.target.value)}
+                        key={el}
+                      >
+                        {el}
+                      </option>
+                    );
                   });
                 })}
               </select>
