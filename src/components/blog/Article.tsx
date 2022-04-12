@@ -8,7 +8,7 @@ interface ArticleProps {
 const Article = ({ article }: ArticleProps): JSX.Element => {
   return (
     <Link href={`/blog/${article.slug}`}>
-      <div className="rounded-lg cursor-pointer dark:border-gray-700">
+      <span className="rounded-lg cursor-pointer dark:border-gray-700">
         <p className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {article.data.title}
         </p>
@@ -16,7 +16,7 @@ const Article = ({ article }: ArticleProps): JSX.Element => {
           {article.data.excerpt}
         </p>
         <small>Posted {article.data.date}</small>
-      </div>
+      </span>
     </Link>
   );
 };

@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-
 interface MetaContainerProps {
   children: React.ReactNode;
   [overrides: string]: any;
@@ -16,10 +15,10 @@ type MetaProps = {
   type: string;
 };
 
-const MetaContainer: React.FC<MetaContainerProps> = ({
+const MetaContainer = ({
   children,
   ...overrides
-}) => {
+}: MetaContainerProps): JSX.Element => {
   const router = useRouter();
 
   const meta: MetaProps = {
@@ -49,7 +48,6 @@ const MetaContainer: React.FC<MetaContainerProps> = ({
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-        
       </Head>
       <Navbar />
       <main className="w-full">{children}</main>

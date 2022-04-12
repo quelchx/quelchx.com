@@ -123,7 +123,7 @@ a {
   h4,
   h5,
   h6 {
-    @apply py-2;
+    @apply py-2 font-semibold;
   }
 
   .md h1 {
@@ -144,9 +144,9 @@ a {
     @apply text-base font-semibold;
   }
 
-  .md {
+  /* .md {
     @apply break-all;
-  }
+  } */
 
   .md pre {
     @apply px-2 py-4 my-2 overflow-x-scroll bg-gray-300 dark:bg-gray-800;

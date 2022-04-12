@@ -5,12 +5,12 @@ interface InputProps {
   placeholder: string;
 }
 
-const InputField: React.FC<InputProps> = ({
+const InputField = ({
   label,
   name,
   type,
   placeholder,
-}) => {
+}: InputProps): JSX.Element => {
   return (
     <>
       <label className="font-medium text-gray-900 dark:text-cyan-50">

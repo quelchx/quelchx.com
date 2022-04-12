@@ -27,9 +27,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             {posts.reverse().map((post: Blog) => {
               return (
                 <div key={post.slug}>
-                  <AOS animation="fade-in">
-                    <Article article={post} />
-                  </AOS>
+                  <Article article={post} />
                 </div>
               );
             })}
