@@ -35,7 +35,10 @@ const MetaContainer = ({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
+        <meta name="keywords" content={meta.description} />
+        <meta name="description" content={meta.description} />
         <meta content={meta.description} name="description" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta property="og:url" content={`https://quelchx${router.asPath}`} />
         <link rel="canonical" href={`https://quelchx.com${router.asPath}`} />
         <meta property="og:type" content={meta.type} />

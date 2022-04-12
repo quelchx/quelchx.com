@@ -9,7 +9,7 @@ const ContactHeading = (): JSX.Element => {
           <p className="mb-2 font-medium text-gray-700 uppercase dark:text-white">
             Want to get in touch?
           </p>
-          <div>
+          <section>
             <h1 className="flex my-2 text-4xl font-bold text-gray-100 md:text-8xl dark:text-white">
               <span
                 style={{
@@ -20,7 +20,7 @@ const ContactHeading = (): JSX.Element => {
                 <p className="pt-2 font-monaco">Contact?</p>
               </span>
             </h1>
-          </div>
+          </section>
         </div>
         <p className="pt-4 text-2xl text-gray-700 dark:text-gray-200">
           If your interesting in leaving a message feel free to use this simple
