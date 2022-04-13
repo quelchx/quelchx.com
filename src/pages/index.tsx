@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 
-import MetaContainer from "../meta/MetaContainer";
+import MetaContainer from "../components/Meta";
 
-import Heading from "../components/home/Heading";
-import Repositories from "../components/home/Repositories";
-import Projects from "../components/home/Projects";
-import Experience from "../components/home/Experience";
+import Heading from "../components/Heading/HomeHeading";
+import Repositories from "../components/Repositories";
+import Projects from "../components/Projects";
+import Experience from "../components/Experience";
 
 const Home: NextPage = () => {
   return (

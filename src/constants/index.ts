@@ -36,7 +36,7 @@ const data = {
       asset: "Python and Django",
       details:
         "Capable of building web applications and RESTful API's using Python and Django",
-      icon: "fab fa-python text-green-400",
+      icon: "fab fa-python is-green",
     },
     {
       asset: "Animations",
@@ -54,7 +54,7 @@ const data = {
       asset: "Front-end Design",
       details:
         "Versitile with Sass and multiple UI frameworks such as TailwindCSS, Bootstrap, Bulma and Semantic UI",
-      icon: "fab fa-sass text-pink-500",
+      icon: "fab fa-sass is-pink",
     },
     {
       asset: "Backend Management",
@@ -66,7 +66,7 @@ const data = {
       asset: "Content Management",
       details:
         "Resourseful with content management systems such as Wordpress, StrapiCMS, Shopify or custom solutions.",
-      icon: "fab fa-wordpress text-blue-400",
+      icon: "fab fa-wordpress is-blue",
     },
   ],
   projects: [

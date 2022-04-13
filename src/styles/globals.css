@@ -74,6 +74,18 @@ a {
 }
 
 @layer components {
+  .is-blue {
+    @apply text-blue-400
+  }
+
+  .is-green {
+    @apply text-green-400
+  }
+
+  .is-pink {
+    @apply text-pink-600
+  }
+  
   .md code,
   .md kbd,
   .md pre,
