@@ -1,6 +1,6 @@
 import data from "../../constants";
 import AOS from "../AOS";
-import Asset from "./helpers/Asset";
+import Asset from "./Asset";
 import Link from "next/link";
 import { Asset as AssetType } from "../../types";
 

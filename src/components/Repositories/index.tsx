@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Repo from "./helpers/Repo";
+import Repo from "./Repo";
 
 const Repositories = (): JSX.Element => {
   const [repos, setRepos] = useState<any>(null);

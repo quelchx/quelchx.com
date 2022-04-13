@@ -1,4 +1,4 @@
-import InputField from "./helpers/InputField";
+import InputField from "./InputField";
 
 const Form = (): JSX.Element => {
   return (

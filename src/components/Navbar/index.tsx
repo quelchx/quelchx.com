@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 
-import routes from "../routes";
-import data from "../constants";
+import routes from "../../routes";
+
+import data from "../../constants";
 import Link from "next/link";
 
 const Navbar = (): JSX.Element => {

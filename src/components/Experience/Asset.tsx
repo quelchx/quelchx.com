@@ -1,5 +1,5 @@
 import React from "react";
-import { Asset } from "../../../types";
+import { Asset } from "../../types";
 
 const Asset = ({ icon, asset, details }: Asset): JSX.Element => {
   return (

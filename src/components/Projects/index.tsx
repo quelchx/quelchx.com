@@ -2,7 +2,7 @@ import React from "react";
 import data from "../../constants";
 import { Project as ProjectType } from "../../types";
 import AOS from "../AOS";
-import Project from "./helpers/Project";
+import Project from "./Project";
 
 const Projects = (): JSX.Element => {
   const listProjects = data.projects.map(

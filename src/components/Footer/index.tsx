@@ -1,6 +1,8 @@
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
-import data from "../constants";
+
+import data from "../../constants";
+
 const Footer = (): JSX.Element => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();

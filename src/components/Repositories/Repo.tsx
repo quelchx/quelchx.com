@@ -1,5 +1,5 @@
 import React from "react";
-import AOS from "../../AOS";
+import AOS from "../AOS";
 
 interface RepoProps {
   [repo: string]: any;

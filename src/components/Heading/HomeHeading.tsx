@@ -3,7 +3,7 @@ import TypeWriter from "typewriter-effect";
 import AOS from "../AOS";
 import data from "../../constants";
 
-const Heading = (): JSX.Element => {
+const HomeHeading = (): JSX.Element => {
   return (
     <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
       <div className="flex flex-wrap items-center sm:-mx-4">
@@ -72,4 +72,4 @@ const Heading = (): JSX.Element => {
   );
 };
 
-export default Heading;
+export default HomeHeading;
