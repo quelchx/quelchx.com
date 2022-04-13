@@ -1,3 +1,4 @@
+
 interface AnimationProps {
   children: React.ReactNode;
   animation?: string;
@@ -16,6 +17,8 @@ const AOS: React.FC<AnimationProps> = ({
     delay: "0",
     duration: "0",
   };
+
+ 
   return (
     <div
       data-aos={animation}

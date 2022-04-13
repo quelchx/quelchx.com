@@ -1,7 +1,7 @@
 ---
 title: How To Make A NextJS Blog With Markdown and TypeScript and TailwindCSS
 date: "April 11, 2022"
-category: ['Markdown', 'TypeScript', 'NextJS', 'TailwindCSS'] 
+category: ['Markdown', 'TypeScript', 'NextJS', 'CSS'] 
 excerpt: If you like what NextJS can do and enjoy the simplicity of Markdown, check out this article to get something started.
 cover_image: "https://seekicon.com/free-icon-download/file-markdown_2.svg"
 ---

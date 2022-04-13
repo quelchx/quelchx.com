@@ -30,38 +30,6 @@ a {
   transform: scale(1.5);
 }
 
-.sass-icon {
-  color: #be185d;
-}
-
-.react-icon {
-  color: #2563eb;
-}
-
-.vue-icon {
-  color: #059669;
-}
-
-.angular-icon {
-  color: #dc2626;
-}
-
-.uikit-icon {
-  color: #fbbf24;
-}
-
-.polygot-icon {
-  color: #b45309;
-}
-
-.server-icon {
-  color: #4b5563;
-}
-
-.cms-icon {
-  color: #4338ca;
-}
-
 .lds-facebook {
   display: inline-block;
   position: relative;
@@ -143,10 +111,6 @@ a {
   h6 {
     @apply text-base font-semibold;
   }
-
-  /* .md {
-    @apply break-all;
-  } */
 
   .md pre {
     @apply px-2 py-4 my-2 overflow-x-scroll bg-gray-300 dark:bg-gray-800;
