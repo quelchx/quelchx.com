@@ -1,9 +1,12 @@
+:root {
+  --tw-text-opacity: 1;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import "../../node_modules/hover.css/css/hover-min.css";
-
 
 html,
 body {
@@ -61,6 +64,18 @@ a {
   animation-delay: 0;
 }
 
+.is-blue {
+  color: rgba(118, 169, 250, var(--tw-text-opacity));
+}
+
+.is-green {
+  color: rgba(49, 196, 141, var(--tw-text-opacity));
+}
+
+.is-pink {
+  color: rgba(214, 31, 105, var(--tw-text-opacity));
+}
+
 @keyframes lds-facebook {
   0% {
     top: 8px;
@@ -74,18 +89,6 @@ a {
 }
 
 @layer components {
-  .is-blue {
-    @apply text-blue-400
-  }
-
-  .is-green {
-    @apply text-green-400
-  }
-
-  .is-pink {
-    @apply text-pink-600
-  }
-  
   .md code,
   .md kbd,
   .md pre,
