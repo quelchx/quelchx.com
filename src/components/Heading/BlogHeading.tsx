@@ -1,4 +1,6 @@
 const BlogHeading = (): JSX.Element => {
+  console.log('BlogHeading Loaded')
+
   return (
     <section className="py-20">
       <div className="container items-center max-w-6xl px-4 mx-auto sm:px-20 md:px-32 lg:px-16">

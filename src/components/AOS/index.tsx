@@ -18,6 +18,8 @@ const AOS: React.FC<AnimationProps> = ({
     duration: "0",
   };
 
+  console.log('AOS Comp Loaded')
+
  
   return (
     <div
