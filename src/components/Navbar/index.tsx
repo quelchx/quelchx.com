@@ -7,7 +7,7 @@ import routes from "../../routes";
 import data from "../../constants";
 import Link from "next/link";
 
-const Navbar = (): JSX.Element => {
+const Navbar = () => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
@@ -48,14 +48,14 @@ const Navbar = (): JSX.Element => {
       <div className="flex items-center justify-between md:flex-row">
         <div className="flex flex-col">
           <Link href="/">
-            <React.Fragment>
-              <h1 className="text-xl font-semibold text-gray-800 hvr-pulse dark:text-white">
-                {data.name}
-              </h1>
-              <p className="text-base text-gray-800 dark:text-white">
-                {data.title}
-              </p>
-            </React.Fragment>
+            <div>
+            <h1 className="text-xl font-semibold text-gray-800 cursor-pointer hvr-pulse dark:text-white">
+              {data.name}
+            </h1>
+            <p className="text-base text-gray-800 cursor-pointer dark:text-white">
+              {data.title}
+            </p>
+            </div>
           </Link>
         </div>
 
