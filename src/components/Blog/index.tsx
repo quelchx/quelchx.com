@@ -43,9 +43,6 @@ const BlogPage = ({ posts, children }: BlogProps) => {
     }
   }, [category]);
 
-  console.log('Blog Component Loaded')
-
-
   return (
     <section className="py-10">
       <div className="px-8 mx-auto max-w-7xl lg:px-16">

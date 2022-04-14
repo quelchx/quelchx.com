@@ -4,11 +4,11 @@ import path from "path";
 import type { GetStaticProps, NextPage } from "next";
 
 import MetaContainer from "../components/Meta";
-import BlogHeading from "../components/Heading/BlogHeading";
+import BlogPage from "../components/Blog";
 import Animate from "../components/AOS";
+import BlogHeading from "../components/Heading/BlogHeading";
 import { Blog } from "../types";
 
-import BlogPage from "../components/Blog";
 interface BlogProps {
   posts: Blog[];
 }
