@@ -3,6 +3,7 @@ import Animate from "../AOS";
 import Article from "../Article";
 import { Blog } from "../../types";
 import React, { useEffect, useState } from "react";
+import BlogArticle from "./BlogArticle";
 interface BlogProps {
   posts: Blog[];
   children: React.ReactNode;
@@ -21,6 +22,12 @@ const BlogPage = ({ posts, children }: BlogProps) => {
       });
     });
     setCategories([...new Set(p)]);
+
+    if (category == "All") {
+      return;
+    } else {
+      filterByCategory(category);
+    }
   }, []);
 
   function filterByCategory(str: string): void {
@@ -78,13 +85,7 @@ const BlogPage = ({ posts, children }: BlogProps) => {
         </div>
 
         <div className="grid grid-cols-1 gap-0 my-6 md:grid-cols-2 md:gap-16">
-          {articles.map((post: Blog) => {
-            return (
-              <div key={post.slug}>
-                <Article article={post} />
-              </div>
-            );
-          })}
+          <BlogArticle articles={articles} />
         </div>
       </div>
     </section>
