@@ -1,30 +1,38 @@
-import matter from "gray-matter";
+import React from "react";
+import { GetStaticProps, NextPage } from "next";
+
 import fs from "fs";
 import path from "path";
-import type { GetStaticProps, NextPage } from "next";
+import matter from "gray-matter";
 
-import MetaContainer from "../components/Meta";
-import BlogPage from "../components/Blog";
-import Animate from "../components/AOS";
-import BlogHeading from "../components/Heading/BlogHeading";
-import { Blog } from "../types";
+import Meta from "../components/Meta";
+import Posts from "../components/Posts";
+import BlogHero from "../components/Hero/BlogHero";
 
-interface BlogProps {
+export type DataProps = {
+  title: string;
+  excerpt: string;
+  date: string;
+  cover_image: string;
+  category: string[];
+};
+
+export type Blog = {
+  slug: string;
+  data: DataProps;
+};
+
+export type BlogProps = {
   posts: Blog[];
-}
+};
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
   return (
-    <MetaContainer
-      title="Developer Blog"
-      description="Eric Quelch - Developer Blog"
-    >
-      <BlogPage posts={posts}>
-        <Animate animation="fade-down">
-          <BlogHeading />
-        </Animate>
-      </BlogPage>
-    </MetaContainer>
+    <Meta title="Developers Blog - Eric Quelch">
+      <Posts posts={posts}>
+        <BlogHero />
+      </Posts>
+    </Meta>
   );
 };
 

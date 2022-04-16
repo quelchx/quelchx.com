@@ -1,53 +1,34 @@
-import InputField from "./InputField";
+import React from "react";
+import Animate from "../Animate";
+import FormInput from "./FormInput";
 
-const Form = (): JSX.Element => {
+const Form = () => {
   return (
-    <form
-      method="POST"
-      name="contact"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <div className="relative">
-        <InputField
-          label="Name"
-          name="name"
-          type="text"
-          placeholder="Your Name"
-        />
+    <div className="w-full rounded-none dark:lg:bg-gray-900 dark:bg-gray-800 lg:rounded-3xl lg:w-6/12 xl:w-5/12">
+      <div className="flex flex-col items-start justify-start w-full h-full p-10 lg:p-16 xl:p-24">
+        <Animate animation="fade-down" delay="200" duration="500">
+          <p className="w-full py-4 text-3xl font-bold dark:text-gray-100">
+            This form is deployed using Netlify.
+          </p>
+          <p className="text-lg dark:text-gray-300">
+            This form is safe, no information is collected and no spam emails
+            will be sent!
+          </p>
+          <p className="py-2 text-sm">
+            If you would rather email me{" "}
+            <a
+              className="text-cyan-800 dark:text-cyan-500 hover:border-b-2 hover:border-cyan-700"
+              href="mailto:quelchx@gmail.com"
+            >
+              click here
+            </a>
+          </p>
+        </Animate>
+        <div className="relative w-full mt-6 space-y-4">
+          <FormInput />
+        </div>
       </div>
-      <div className="relative my-4">
-        <InputField
-          label="Email"
-          name="email"
-          type="email"
-          placeholder="Your Email"
-        />
-      </div>
-      <div className="relative">
-        <label className="font-medium text-gray-900 dark:text-cyan-50">
-          Message
-        </label>
-        <textarea
-          name="message"
-          rows={10}
-          className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
-          placeholder="Message"
-        />
-      </div>
-      <div className="relative">
-        <div data-netlify-recaptcha="true"></div>
-      </div>
-      <div className="relative mt-4">
-        <button
-          type="submit"
-          className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hvr-radial-out hover:bg-green-700 ease"
-        >
-          Send
-        </button>
-      </div>
-    </form>
+    </div>
   );
 };
 

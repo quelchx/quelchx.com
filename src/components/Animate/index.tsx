@@ -1,18 +1,17 @@
-
-interface AnimationProps {
+type AnimationProps = {
   children: React.ReactNode;
   animation?: string;
   duration?: string | number;
   delay?: string | number;
-}
+};
 
-const AOS: React.FC<AnimationProps> = ({
+const Animate: React.FC<AnimationProps> = ({
   children,
   animation,
   duration,
   delay,
 }) => {
-  AOS.defaultProps = {
+  Animate.defaultProps = {
     animation: "fade-in",
     delay: "0",
     duration: "0",
@@ -29,4 +28,4 @@ const AOS: React.FC<AnimationProps> = ({
   );
 };
 
-export default AOS;
+export default Animate;

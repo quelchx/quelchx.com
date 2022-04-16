@@ -1,25 +1,12 @@
-import data from "../../constants";
-import AOS from "../AOS";
-import Asset from "./Asset";
+import Animate from "../Animate";
 import Link from "next/link";
-import { Asset as AssetType } from "../../types";
+import React from "react";
+import AssetList from "./AssetList";
 
-const Experience = (): JSX.Element => {
-  const listAssets = data.assets.map(
-    (asset: AssetType, idx: string | number) => {
-      return (
-        <Asset
-          key={idx}
-          icon={asset.icon}
-          asset={asset.asset}
-          details={asset.details}
-        />
-      );
-    }
-  );
+const Experience = () => {
   return (
-    <>
-      <div className="max-w-6xl px-6 pb-10 mx-auto rounded solid lg:px-12">
+    <React.Fragment>
+      <div className="max-w-6xl px-6 py-3 mx-auto rounded solid lg:px-12">
         <div className="flex flex-col items-start leading-7 border-0 border-gray-200 lg:items-center lg:flex-row">
           <div className="box-border flex-1 text-center border-solid sm:text-left">
             <h1 className="my-4 text-4xl font-bold">Experiences</h1>
@@ -39,8 +26,8 @@ const Experience = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="py-10">
-        <AOS animation="zoom-in" delay="200" duration="300">
+      <div className="py-2">
+        <Animate animation="zoom-in" delay="200" duration="300">
           <div className="container max-w-6xl px-4 mx-auto">
             <h2 className="text-4xl font-bold tracking-tight text-center text-gray-600 dark:text-cyan-500">
               Experienced With
@@ -49,12 +36,12 @@ const Experience = (): JSX.Element => {
               Personal skills I have aquired and technologies I'm familiar with
             </p>
             <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
-              {listAssets}
+              <AssetList />
             </div>
           </div>
-        </AOS>
+        </Animate>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

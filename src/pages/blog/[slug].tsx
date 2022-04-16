@@ -6,50 +6,50 @@ import { Marked } from "@ts-stack/markdown";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 
-import MetaContainer from "../../components/Meta";
-import AOS from "../../components/AOS";
-import { Post } from "../../types";
+import Meta from "../../components/Meta";
+import Animate from "../../components/Animate";
+import { DataProps } from "../blog";
+import { ParsedUrlQuery } from "querystring";
 
-interface PostPageProps {
-  data: Post;
+type PostPageProps = {
+  data: DataProps;
   content: string;
-  slug: string;
-}
+};
 
 const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
   let markup = Marked.parse(content);
   return (
-    <MetaContainer
+    <Meta
       title={data.title}
       description={data.excerpt}
       image={data.cover_image}
     >
       <div className="mx-10 my-12">
         <div className="mt-4">
-          <AOS animation="fade-left">
+          <Animate animation="fade-left">
             <h1 className="text-4xl sm:text-5xl">{data.title}</h1>
-          </AOS>
-          <AOS animation="fade-right">
+          </Animate>
+          <Animate animation="fade-right">
             <p className="py-2 leading-6">Posted: {data.date}</p>
-          </AOS>
+          </Animate>
           <section className="my-6">
-            <AOS animation="fade-down">
+            <Animate animation="fade-down">
               <div
                 className="md"
                 dangerouslySetInnerHTML={{ __html: markup }}
               ></div>
-            </AOS>
+            </Animate>
           </section>
-          <AOS animation="fade-in" delay={200}>
+          <Animate animation="fade-in" delay={200}>
             <Link href="/blog">
               <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                 Go Back
               </a>
             </Link>
-          </AOS>
+          </Animate>
         </div>
       </div>
-    </MetaContainer>
+    </Meta>
   );
 };
 
@@ -68,9 +68,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({
-  params: { slug },
-}: any) => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug } = context.params!
   const markdownWithMeta = fs.readFileSync(
     path.join("src/posts", slug + ".md"),
     "utf-8"

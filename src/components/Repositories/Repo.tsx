@@ -1,19 +1,33 @@
+import { motion } from "framer-motion";
 import React from "react";
-import AOS from "../AOS";
+import Animate from "../Animate";
 
 interface RepoProps {
   [repo: string]: any;
 }
 
-const Repo = ({ repo }: RepoProps): JSX.Element => {
+const svgVariant = {
+  hover: {
+    color: "#01aa22",
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
+const Repo = ({ repo }: RepoProps) => {
   return (
-    <AOS key={repo.id} animation="fade-up" delay="300" duration="500">
+    <Animate animation="fade-up" delay="300" duration="500">
       <p className="mt-4 mb-2 font-semibold text-gray-900 dark:text-gray-300">
         {repo.name.toUpperCase()}
       </p>
       <p className="text-gray-800 dark:text-gray-200">{repo.description}</p>
       <div className="flex flex-row gap-3 py-2">
-        <div className="flex flex-row hvr-pulse">
+        <motion.div
+          variants={svgVariant}
+          whileHover="hover"
+          className="flex flex-row hvr-pulse"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -26,8 +40,12 @@ const Repo = ({ repo }: RepoProps): JSX.Element => {
           <p className="pl-1 text-gray-800 dark:text-gray-200">
             {repo.stargazers_count}
           </p>
-        </div>
-        <div className="flex flex-row hvr-buzz-out">
+        </motion.div>
+        <motion.div
+          variants={svgVariant}
+          whileHover="hover"
+          className="flex flex-row hvr-buzz-out"
+        >
           <div className="pt-0.5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,8 +60,10 @@ const Repo = ({ repo }: RepoProps): JSX.Element => {
           <p className="text-gray-800 dark:text-gray-200 pl-0.5">
             {repo.forks_count}
           </p>
-        </div>
-        <a
+        </motion.div>
+        <motion.a
+          variants={svgVariant}
+          whileHover="hover"
           href={repo.clone_url}
           className="flex flex-row items-center w-full space-x-2 font-semibold group"
         >
@@ -59,9 +79,9 @@ const Repo = ({ repo }: RepoProps): JSX.Element => {
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
           </div>
-        </a>
+        </motion.a>
       </div>
-    </AOS>
+    </Animate>
   );
 };
 

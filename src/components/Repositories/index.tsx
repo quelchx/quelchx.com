@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Repo from "./Repo";
 
-const Repositories = (): JSX.Element => {
-  const [repos, setRepos] = useState<any>(null);
+const Repositories = () => {
+  const [repos, setRepos] = useState<[]>();
   const [isLoading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Repositories = (): JSX.Element => {
   if (!repos) return <p>No profile data</p>;
 
   return (
-    <div className="px-8 mx-auto max-w-7xl lg:px-16">
+    <div className="px-8 mx-auto max-w-7xl lg:px-12">
       <div className="flex flex-col items-center justify-between md:flex-row">
         <h1 className="max-w-lg my-20 text-6xl font-bold text-center text-gray-700 lg:text-9xl dark:text-white md:my-0 lg:text-left">
           Latest Code
@@ -61,8 +61,8 @@ const Repositories = (): JSX.Element => {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 gap-0 mt-6 text-gray-600 dark:text-gray-200 md:grid-cols-2 md:gap-8">
-        {repos.map((repo: Object[], idx: any) => {
+      <div className="grid grid-cols-2 gap-0 my-8 text-gray-600 dark:text-gray-200 md:grid-cols-3 md:gap-8">
+        {repos.map((repo: [], idx: number) => {
           return <Repo key={idx} repo={repo} />;
         })}
       </div>

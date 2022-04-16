@@ -1,27 +1,26 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 
-interface MetaContainerProps {
-  children: React.ReactNode;
-  [overrides: string]: any;
-}
+import { useRouter } from "next/router";
+import React from "react";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 type MetaProps = {
+  children: React.ReactNode;
+  [overrides: string]: any;
+};
+
+type MetaState = {
   title: string;
   description: string;
   image: string;
   type: string;
 };
 
-const MetaContainer = ({
-  children,
-  ...overrides
-}: MetaContainerProps): JSX.Element => {
+const Meta = ({ children, ...overrides }: MetaProps) => {
   const router = useRouter();
 
-  const meta: MetaProps = {
+  const meta: MetaState = {
     title: "Eric Quelch - Developer, Writer, Creator, Mentor and Tutor",
     description: `I've been developing websites for 4 years straight. Get in touch with me to know more.`,
     image: "https://avatars.githubusercontent.com/u/74473426?v=4",
@@ -30,7 +29,7 @@ const MetaContainer = ({
   };
 
   return (
-    <>
+    <React.Fragment>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <title>{meta.title}</title>
@@ -53,10 +52,10 @@ const MetaContainer = ({
         <meta name="twitter:image" content={meta.image} />
       </Head>
       <Navbar />
-      <main className="w-full">{children}</main>
+      {children}
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
 
-export default MetaContainer;
+export default Meta;
