@@ -14,7 +14,7 @@ const buttonVariant = {
     transition: {
       duration: 0.5,
       delay: 0.3,
-      yoyo: 2, 
+      repeat: 2, 
     },
   },
 };

@@ -24,14 +24,14 @@ const Navbar = () => {
       <nav className="flex items-center justify-between md:flex-row">
         <div className="flex flex-col">
           <Link href="/">
-            <React.Fragment>
+            <a>
               <h1 className="text-xl font-semibold text-gray-800 cursor-pointer hvr-pulse dark:text-white">
                 Eric<span className="text-green-500"> Quelch</span>
               </h1>
               <p className="text-base text-gray-800 cursor-pointer dark:text-white">
                 {data.title}
               </p>
-            </React.Fragment>
+            </a>
           </Link>
         </div>
 

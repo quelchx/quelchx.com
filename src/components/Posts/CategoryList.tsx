@@ -6,6 +6,8 @@ type CategoryListProps = {
 };
 
 const CategoryList = ({ categories, onClick }: CategoryListProps) => {
+  console.log('Category List')
+
   return (
     <React.Fragment>
       {categories.map((cat: string) => {
@@ -19,4 +21,4 @@ const CategoryList = ({ categories, onClick }: CategoryListProps) => {
   );
 };
 
-export default CategoryList;
+export default React.memo(CategoryList);
