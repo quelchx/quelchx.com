@@ -2,14 +2,14 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 import { Marked } from "@ts-stack/markdown";
-
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
-
 import Meta from "../../components/Meta";
 import Animate from "../../components/Animate";
 import { DataProps } from "../blog";
-import { ParsedUrlQuery } from "querystring";
+import dayjs from "dayjs";
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime)
 
 type PostPageProps = {
   data: DataProps;
@@ -30,7 +30,7 @@ const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
             <h1 className="text-4xl sm:text-5xl">{data.title}</h1>
           </Animate>
           <Animate animation="fade-right">
-            <p className="py-2 leading-6">Posted: {data.date}</p>
+            <p className="py-2 leading-6">Posted: {dayjs(data.date).fromNow()} on {data.date}</p>
           </Animate>
           <section className="my-6">
             <Animate animation="fade-down">

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import { Blog } from "../../pages/blog";
-
+import dayjs from "dayjs";
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime)
 type PostProps = {
   post: Blog;
 };
@@ -16,7 +18,7 @@ const Post = ({ post }: PostProps) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {post.data.excerpt}
         </p>
-        <small>Posted {post.data.date}</small>
+        <small>Posted {dayjs(post.data.date).fromNow()}</small>
         <div className="flex py-2">
           {post.data.category.map((el, idx) => {
             return (
