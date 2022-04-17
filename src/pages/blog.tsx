@@ -1,12 +1,11 @@
+import matter from "gray-matter";
+import { GetStaticProps, NextPage } from "next/types";
+import path from "path";
 import React from "react";
-import { GetStaticProps, NextPage } from "next";
 
 import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-
 import Meta from "../components/Meta";
-import Posts from "../components/Posts";
+import PostsWrapper from "../components/Posts";
 import BlogHero from "../components/Hero/BlogHero";
 
 export type DataProps = {
@@ -24,14 +23,14 @@ export type Blog = {
 
 export type BlogProps = {
   posts: Blog[];
+  categories: string[];
 };
 
-const Blog: NextPage<BlogProps> = ({ posts }) => {
+const PostsPage: NextPage<BlogProps> = ({ posts, categories }) => {
   return (
-    <Meta title="Developers Blog - Eric Quelch">
-      <Posts posts={posts}>
-        <BlogHero />
-      </Posts>
+    <Meta title='Developers Notes - Eric Quelch'>
+      <BlogHero />
+      <PostsWrapper posts={posts} categories={categories} />
     </Meta>
   );
 };
@@ -48,11 +47,23 @@ export const getStaticProps: GetStaticProps = async () => {
     return { slug, data };
   });
 
+  let temp: string[] = [];
+  posts.forEach((post: any) => {
+    post.data.category.forEach((category: any) => {
+      temp.push(category);
+    });
+  });
+
+  const categories = temp.filter((t, idx) => {
+    return temp.indexOf(t) === idx;
+  });
+
   return {
     props: {
       posts,
+      categories,
     },
   };
 };
 
-export default Blog;
+export default PostsPage;

@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { Blog } from "../../pages/blog";
-import PostList from "./PostsList";
+import React, { useState } from "react";
+import { BlogProps } from "../../pages/blog";
+import BlogPosts from "./BlogPosts";
+import Categories from "./Categories";
 
-type PostProps = {
-  posts: Blog[];
-  children: React.ReactNode;
-};
+const PostsWrapper = ({ posts, categories }: BlogProps) => {
+  const [articles, setArticles] = useState(posts);
 
-const Posts = ({ posts, children }: PostProps) => {
   return (
     <section className="py-10">
       <div className="px-8 mx-auto max-w-7xl lg:px-16">
-        {children}
-        <PostList posts={posts} />
+        <Categories
+          setArticles={setArticles}
+          posts={posts}
+          categories={categories}
+        />
+        <BlogPosts articles={articles} />
       </div>
     </section>
   );
 };
 
-export default React.memo(Posts);
+export default PostsWrapper;

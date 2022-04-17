@@ -3,6 +3,7 @@ import React from "react";
 import { Blog } from "../../pages/blog";
 import dayjs from "dayjs";
 import relativeTime from 'dayjs/plugin/relativeTime'
+
 dayjs.extend(relativeTime)
 type PostProps = {
   post: Blog;
