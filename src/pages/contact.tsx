@@ -14,7 +14,6 @@ const Contact: NextPage = () => {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row">
             <ContactHero />
-
             <Form />
           </div>
         </div>

@@ -28,13 +28,28 @@ const ContactHero = () => {
                 </h1>
               </section>
             </div>
-            <p className="pt-4 text-2xl text-gray-700 dark:text-gray-200">
-              If your interesting in leaving a message feel free to use this
-              page.
-            </p>
+            <Animate animation="fade-down" delay="200" duration="500">
+              <p className="w-full py-4 text-3xl font-bold dark:text-gray-100">
+                This form is deployed using Netlify.
+              </p>
+              <p className="text-lg dark:text-gray-300">
+                This form is safe, no information is collected and no spam
+                emails will be sent!
+              </p>
+              <p className="py-2">
+                If you would rather use your email provider to contact me{" "}
+                <a
+                  className="text-cyan-800 dark:text-cyan-500 hover:border-b-2 hover:border-cyan-700"
+                  href="mailto:quelchx@gmail.com"
+                >
+                  click here
+                </a>
+              </p>
+            </Animate>
+         
             <button className="py-4">
               <a
-                target='_blank'
+                target="_blank"
                 rel="noreferrer"
                 href={`https://raw.githubusercontent.com/quelchx/quelchx/main/EQ-Developer.pdf`}
                 className="flex flex-row items-center px-3 py-4 mb-20 space-x-4 text-xl font-semibold text-white bg-gray-900 rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0 dark:text-gray-700 dark:bg-white"
