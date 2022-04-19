@@ -8,6 +8,8 @@ const data = {
     twitter: "https://twitter.com/wcbblez",
     avatar: "https://avatars.githubusercontent.com/u/74473426?v=4",
   },
+  resume:
+    "https://github.com/quelchx/quelchx/blob/main/docs/equelch_resume.pdf",
   highlights: ["Developer", "Mentor", "Designer", "Leader"],
   colors: [
     "#F59E0B",
@@ -109,7 +111,7 @@ const data = {
         },
       },
     },
-    slideInRight:{
+    slideInRight: {
       hidden: {
         opacity: 0,
         x: "100vw",
@@ -174,7 +176,6 @@ const data = {
       },
     },
   },
-  
 };
 
 export default data;

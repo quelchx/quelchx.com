@@ -46,12 +46,12 @@ const ContactHero = () => {
                 </a>
               </p>
             </Animate>
-         
+
             <button className="py-4">
               <a
                 target="_blank"
                 rel="noreferrer"
-                href={`https://raw.githubusercontent.com/quelchx/quelchx/main/EQ-Developer.pdf`}
+                href={data.resume}
                 className="flex flex-row items-center px-3 py-4 mb-20 space-x-4 text-xl font-semibold text-white bg-gray-900 rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0 dark:text-gray-700 dark:bg-white"
               >
                 <svg
