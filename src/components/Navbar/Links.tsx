@@ -34,9 +34,9 @@ const Links = () => {
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="text-base font-normal text-gray-700 cursor-pointer hvr-buzz-out dark:text-white"
+              className="text-base font-normal cursor-pointer hvr-buzz-out "
             >
-                {router.asPath === route.path && (
+              {router.asPath === route.path && (
                 <React.Fragment>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,6 @@ const Links = () => {
                 </React.Fragment>
               )}
               {route.name}
-            
             </motion.a>
           </Link>
         );

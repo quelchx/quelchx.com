@@ -8,7 +8,7 @@ const TextShadow = ({ children }: { children: string | React.ReactNode }) => {
         scale: 1.05,
         textShadow: "0px 0px 8px rgba(255, 255, 255, 0.2)",
       }}
-      className="font-medium text-gray-500"
+      className="font-medium"
     >
       {children}
     </motion.span>

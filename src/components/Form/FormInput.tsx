@@ -26,13 +26,13 @@ const FormInput = () => {
         />
       </div>
       <div className="relative">
-        <label className="font-medium text-gray-900 dark:text-cyan-50">
+        <label className="font-medium">
           Message
         </label>
         <textarea
           name="message"
           rows={10}
-          className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+          className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
           placeholder="Message"
         />
       </div>
@@ -42,7 +42,7 @@ const FormInput = () => {
       <div className="relative mt-4">
         <button
           type="submit"
-          className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-600 rounded-lg hvr-radial-out hover:bg-green-700 ease"
+          className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hvr-radial-out hover:bg-green-700 ease"
         >
           Send
         </button>

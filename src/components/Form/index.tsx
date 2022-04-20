@@ -4,7 +4,7 @@ import FormInput from "./FormInput";
 
 const Form = () => {
   return (
-    <div className="w-full rounded-none dark:lg:bg-gray-900 dark:bg-gray-800 lg:rounded-3xl lg:w-6/12 xl:w-5/12">
+    <div className="w-full rounded-none  lg:rounded-3xl lg:w-6/12 xl:w-5/12">
       <div className="flex flex-col items-start justify-start w-full h-full px-10 lg:px-16 xl:p-24">
         <Animate animation="fade-down" delay="200" duration="500">
           <p className="text-lg block lg:hidden dark:text-gray-300">

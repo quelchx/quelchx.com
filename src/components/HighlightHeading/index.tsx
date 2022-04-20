@@ -9,7 +9,7 @@ type HighlightHeadingProps = {
 
 const HighlightHeading = ({ highlights }: HighlightHeadingProps) => {
   return (
-    <div className="w-full md:w-1/2 md:px-2">
+    <div className="w-full grid grid-cols-2 place-items-center">
       {highlights.map((highlight, idx) => {
         let i = data.highlights.indexOf(highlight);
         return (
@@ -21,14 +21,15 @@ const HighlightHeading = ({ highlights }: HighlightHeadingProps) => {
           >
             <div
               key={idx}
-              className="flex my-2 text-3xl font-bold text-gray-100 sm:text-5xl lg:text-8xl md:text-7xl dark:text-white"
+              className="flex my-2 text-2xl font-bold sm:text-4xl lg:text-7xl md:text-6xl"
             >
               <motion.span
+              className="rounded-tr-2xl"
                 transition={{ type: "spring", stiffness: 300 }}
                 whileHover={{ scale: 1.1, originX: 0 }}
                 style={{ backgroundColor: data.colors[i] }}
               >
-                <p className="pt-2">{highlight}</p>
+                <p className="p-3">{highlight}</p>
               </motion.span>
             </div>
           </Animate>

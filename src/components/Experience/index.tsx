@@ -7,15 +7,17 @@ const Experience = () => {
   return (
     <React.Fragment>
       <div className="max-w-6xl px-6 py-3 mx-auto rounded solid lg:px-12">
-        <div className="flex flex-col items-start leading-7 border-0 border-gray-200 lg:items-center lg:flex-row">
+        <div className="flex flex-col items-start leading-7 border-0 lg:items-center lg:flex-row">
           <div className="box-border flex-1 text-center border-solid sm:text-left">
-            <h1 className="my-4 text-4xl font-bold">Experiences</h1>
-            <p className="mt-2 text-xl text-left border-0 border-gray-200 sm:text-xl font-poppin">
-              Looking for a developer? My services will help you maximize and
-              boost your productivity. I know im no Linus Torvalds, Dennis
-              Ritchie, Brendan Eich or Bill Gates, but I will bring motivation,
-              passion and work hard. I may not be able to change the world but I
-              can want to start somewhere.
+            <h1 className="my-4 text-4xl font-bold">
+              Looking For A Developer?
+            </h1>
+            <p className="mt-2 text-xl text-left border-0  sm:text-xl font-poppin">
+              My services will help you maximize and boost your productivity.
+              <br />I know im no Linus Torvalds, Dennis Ritchie, Brendan Eich or
+              Bill Gates, but I will bring motivation, passion and work hard. I
+              may not be able to change the world but I can want to start
+              somewhere.
             </p>
           </div>
           <Link href="/contact">
@@ -29,8 +31,8 @@ const Experience = () => {
       <div className="py-2">
         <Animate animation="zoom-in" delay="200" duration="300">
           <div className="container max-w-6xl px-4 mx-auto">
-            <h2 className="text-4xl font-bold tracking-tight text-center text-gray-600 dark:text-cyan-500">
-              Experienced With
+            <h2 className="text-4xl font-bold tracking-tight text-center">
+              What is in my Stack?
             </h2>
             <p className="mt-2 text-lg text-center">
               Personal skills I have aquired and technologies I'm familiar with

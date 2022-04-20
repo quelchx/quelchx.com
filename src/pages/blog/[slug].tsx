@@ -4,12 +4,15 @@ import path from "path";
 import { Marked } from "@ts-stack/markdown";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
-import Meta from "../../components/Meta";
 import Animate from "../../components/Animate";
 import { DataProps } from "../blog";
 import dayjs from "dayjs";
-import relativeTime from 'dayjs/plugin/relativeTime'
-dayjs.extend(relativeTime)
+import relativeTime from "dayjs/plugin/relativeTime";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import MetaHead from "../../components/Meta/MetaHead";
+import React from "react";
+dayjs.extend(relativeTime);
 
 type PostPageProps = {
   data: DataProps;
@@ -19,18 +22,22 @@ type PostPageProps = {
 const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
   let markup = Marked.parse(content);
   return (
-    <Meta
-      title={data.title}
-      description={data.excerpt}
-      image={data.cover_image}
-    >
-      <div className="mx-10 my-12">
+    <React.Fragment>
+      <MetaHead
+        title={data.title}
+        description={data.excerpt}
+        image={data.cover_image}
+      />
+      <Navbar />
+      <div className="mx-20 my-12">
         <div className="mt-4">
           <Animate animation="fade-left">
             <h1 className="text-4xl sm:text-5xl">{data.title}</h1>
           </Animate>
           <Animate animation="fade-right">
-            <p className="py-2 leading-6">Posted: {dayjs(data.date).fromNow()} on {data.date}</p>
+            <p className="py-2 leading-6">
+              Posted: {dayjs(data.date).fromNow()} on {data.date}
+            </p>
           </Animate>
           <section className="my-6">
             <Animate animation="fade-down">
@@ -49,7 +56,8 @@ const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
           </Animate>
         </div>
       </div>
-    </Meta>
+      <Footer />
+    </React.Fragment>
   );
 };
 
@@ -69,7 +77,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params!
+  const { slug } = context.params!;
   const markdownWithMeta = fs.readFileSync(
     path.join("src/posts", slug + ".md"),
     "utf-8"

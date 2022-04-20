@@ -20,7 +20,7 @@ const Repositories = () => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center py-20">
+      <div className="flex items-center justify-center">
         <div className="lds-facebook">
           <div></div>
           <div></div>
@@ -35,12 +35,12 @@ const Repositories = () => {
   return (
     <div className="px-8 mx-auto max-w-7xl lg:px-12">
       <div className="flex flex-col items-center justify-between md:flex-row">
-        <h1 className="max-w-lg my-20 text-6xl font-bold text-center text-gray-700 lg:text-9xl dark:text-white md:my-0 lg:text-left">
+        <h1 className="max-w-lg my-20 text-3xl font-bold text-center lg:text-6xl md:my-0 lg:text-left">
           Latest Code
         </h1>
         <a
           href={`https://github.com/quelchx`}
-          className="flex flex-row items-center px-6 py-4 mb-20 space-x-4 text-xl font-semibold text-white bg-gray-900 rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0 dark:text-gray-700 dark:bg-white"
+          className="flex flex-row items-center bg-purple-800 text-white px-6 py-4 mb-20 space-x-4 text-xl font-semibold rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Repositories = () => {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 gap-0 my-8 text-gray-600 dark:text-gray-200 md:grid-cols-3 md:gap-8">
+      <div className="grid grid-cols-2 gap-0 my-8 md:grid-cols-3 md:gap-8">
         {repos.map((repo: [], idx: number) => {
           return <Repo key={idx} repo={repo} />;
         })}

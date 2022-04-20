@@ -1,32 +1,69 @@
-import React from "react";
-import Animate from "../Animate";
-import ProjectList from "./ProjectList";
+import {
+  chakra,
+  useColorModeValue,
+  Box,
+  Flex,
+  SimpleGrid,
+  Container,
+} from "@chakra-ui/react";
 
-const Projects = () => {
+import data from "../../constants";
+import { ProjectCard } from "./ProjectCard";
+
+export default function PersonalProjects() {
   return (
-    <Animate>
-      <div className="max-w-6xl px-12 mx-auto md:px-16 xl:px-10">
-        <div className="flex flex-col items-center lg:flex-row">
-          <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 lg:mb-0 lg:w-1/2">
-            <Animate animation="zoom-in">
-              <p className="mb-2 text-base font-medium tracking-tight text-green-500 uppercase">
-                What I have been up to
-              </p>
-              <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 dark:text-gray-300 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-                Projects of mine
-              </h2>
-              <p className="my-2 text-lg ">
-                Here are a few useful packages and side projects I have created.
-              </p>
-            </Animate>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <ProjectList />
-          </div>
-        </div>
+    <Flex
+      textAlign={"center"}
+      pt={10}
+      justifyContent={"center"}
+      direction={"column"}
+      width={"full"}
+    >
+      <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
+        <chakra.h3
+          fontFamily={"Work Sans"}
+          fontWeight={"bold"}
+          fontSize={20}
+          textTransform={"uppercase"}
+          color={"blue.400"}
+        >
+          My Creations
+        </chakra.h3>
+        <chakra.h1
+          py={5}
+          fontSize={36}
+          fontFamily={"Work Sans"}
+          fontWeight={"bold"}
+          color={useColorModeValue("gray.700", "gray.50")}
+        >
+          Personal Projects Currently in Production
+        </chakra.h1>
+        <chakra.h2
+          margin={"auto"}
+          width={"70%"}
+          fontFamily={"Inter"}
+          fontWeight={"medium"}
+          color={useColorModeValue("gray.500", "gray.400")}
+        >
+          With over{" "}
+          <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
+            7500+
+          </chakra.strong>{" "}
+          downloads among my projects, check out what the buzz is about.
+        </chakra.h2>
+      </Box>
+      <div className="md:px-16 px-4 flex items-center">
+        <SimpleGrid
+          columns={{ base: 1, xl: 2 }}
+          spacing={"4"}
+          mt={16}
+          mx={"auto"}
+        >
+          {data.projects.map((cardInfo, index) => (
+            <ProjectCard delay={index * 250} {...cardInfo} key={index} />
+          ))}
+        </SimpleGrid>
       </div>
-    </Animate>
+    </Flex>
   );
-};
-
-export default Projects;
+}

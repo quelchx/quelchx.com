@@ -28,7 +28,7 @@ const BlogHero = () => {
                 </motion.h2>
                 <motion.p
                   variants={slideInRight}
-                  className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6"
+                  className="mb-4 font-medium tracking-tight xl:mb-6"
                 >
                   Check out some developer related articles I have wrote.
                 </motion.p>

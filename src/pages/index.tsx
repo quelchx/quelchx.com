@@ -1,24 +1,24 @@
 import type { NextPage } from "next";
-import Experience from "../components/Experience";
-import Hero from "../components/Hero/Hero";
 
 import Meta from "../components/Meta";
-import Projects from "../components/Projects";
+import MainHero from "../components/Hero/MainHero";
 import Repositories from "../components/Repositories";
+import Projects from "../components/Projects";
+import Experience from "../components/Experience";
 
 const Home: NextPage = () => {
   return (
     <Meta title="Eric Quelch - Full Stack Developer">
-      <header className="px-2 py-32 bg-gray-200 dark:bg-gray-900 md:px-0">
-        <Hero />
+      <header className="px-2 md:px-0">
+        <MainHero />
       </header>
-      <main className="py-20">
-        <Repositories />
-      </main>
-      <article className="flex items-center justify-center py-16 bg-gray-200 min-w-screen dark:bg-gray-900">
+      <article className="flex items-center justify-center pb-12 min-w-screen">
         <Projects />
       </article>
-      <section className="py-10 leading-7 text-gray-900 dark:text-white ">
+      <div className="pt-12">
+        <Repositories />
+      </div>
+      <section className="py-10 leading-7">
         <Experience />
       </section>
     </Meta>

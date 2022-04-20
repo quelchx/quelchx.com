@@ -2,17 +2,14 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Links from "./Links";
 import data from "../../constants";
-import ThemeSwitch from "../ThemeSwitch";
 import SocialLinks from "../SocialLinks";
 import { motion } from "framer-motion";
+import { Button, useColorMode } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
-  const [isMounted, setMouted] = useState<boolean>(false);
-
-  useEffect(() => {
-    setMouted(true);
-  }, []);
-
+  const { colorMode, toggleColorMode } = useColorMode();
+ 
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -25,10 +22,10 @@ const Navbar = () => {
         <div className="flex flex-col">
           <Link href="/">
             <a>
-              <h1 className="text-xl font-semibold text-gray-800 cursor-pointer hvr-pulse dark:text-white">
+              <h1 className="text-xl font-semibold cursor-pointer hvr-pulse">
                 Eric<span className="text-green-500"> Quelch</span>
               </h1>
-              <p className="text-base text-gray-800 cursor-pointer dark:text-white">
+              <p className="text-base cursor-pointer ">
                 {data.title}
               </p>
             </a>
@@ -40,7 +37,9 @@ const Navbar = () => {
         </div>
 
         <SocialLinks>
-          <ThemeSwitch isMounted={isMounted} />
+          <Button onClick={toggleColorMode}>
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </SocialLinks>
       </nav>
 
