@@ -61,7 +61,7 @@ const Repositories = () => {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 gap-0 my-8 md:grid-cols-3 md:gap-8">
+      <div className="grid grid-cols-1 gap-0 my-8 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
         {repos.map((repo: [], idx: number) => {
           return <Repo key={idx} repo={repo} />;
         })}
