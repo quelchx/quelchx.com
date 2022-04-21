@@ -22,7 +22,6 @@ const LazyVoxelComputer = dynamic(() => import("../VoxelComputer"), {
 });
 
 const Meta = ({ children, ...overrides }: MetaProps) => {
-
   return (
     <React.Fragment>
       <MetaHead {...overrides} />

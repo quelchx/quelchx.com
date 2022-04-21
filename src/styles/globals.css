@@ -93,7 +93,7 @@ a {
   .md kbd,
   .md pre,
   .md samp {
-    @apply font-mono text-sm;
+    @apply font-monaco text-sm;
   }
 
   .md p {
@@ -128,10 +128,12 @@ a {
   }
 
   .md pre {
-    @apply px-2 py-4 my-2 overflow-x-scroll bg-gray-300 dark:bg-gray-800;
+    @apply px-2 py-4 my-2 overflow-x-scroll ;
   }
 
-  .md pre code {
-    @apply text-blue-800 dark:text-blue-300;
+  .md code {
+    @apply bg-green-500 px-1
   }
+
+  
 }

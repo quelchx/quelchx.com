@@ -10,7 +10,7 @@ const SocialLinks = ({ children }: SocialLinksProps) => {
     <div className="flex flex-row items-center space-x-4">
       <a
         href={data.social.github}
-        className="text-base font-normal text-purple-500 hvr-buzz"
+        className="text-base font-normal hvr-buzz"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const SocialLinks = ({ children }: SocialLinksProps) => {
       </a>
       <a
         href={data.social.twitter}
-        className="text-base font-normal text-blue-700 hvr-buzz"
+        className="text-base font-normal  hvr-buzz"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const SocialLinks = ({ children }: SocialLinksProps) => {
       </a>
       <a
         href={data.social.linkedin}
-        className="text-base font-normal text-blue-400 hvr-buzz"
+        className="text-base font-normal hvr-buzz"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

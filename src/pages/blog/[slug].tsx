@@ -1,18 +1,25 @@
-import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
-import { Marked } from "@ts-stack/markdown";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import matter from "gray-matter";
+
+import React from "react";
 import Link from "next/link";
-import Animate from "../../components/Animate";
-import { DataProps } from "../blog";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+
 import dayjs from "dayjs";
+dayjs.extend(relativeTime);
+
+import Animate from "../../components/Animate";
 import relativeTime from "dayjs/plugin/relativeTime";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import MetaHead from "../../components/Meta/MetaHead";
-import React from "react";
-dayjs.extend(relativeTime);
+
+import { DataProps } from "../blog";
+
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 type PostPageProps = {
   data: DataProps;
@@ -20,7 +27,6 @@ type PostPageProps = {
 };
 
 const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
-  let markup = Marked.parse(content);
   return (
     <React.Fragment>
       <MetaHead
@@ -41,10 +47,28 @@ const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
           </Animate>
           <section className="my-6">
             <Animate animation="fade-down">
-              <div
-                className="md"
-                dangerouslySetInnerHTML={{ __html: markup }}
-              ></div>
+              <ReactMarkdown
+              className="md"
+                components={{
+                  code({ node, inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || "");
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        children={String(children).replace(/\n$/, "")}
+                        language={match[1]}
+                        PreTag="div"
+                        {...props}
+                      />
+                    ) : (
+                      <code className={className} {...props}>
+                        {children}
+                      </code>
+                    );
+                  },
+                }}
+                children={content}
+                remarkPlugins={[remarkGfm]}
+              />
             </Animate>
           </section>
           <Animate animation="fade-in" delay={200}>

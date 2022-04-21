@@ -1,17 +1,18 @@
 import React from "react";
 
 type TooltipProps = {
-  text: string
-  children: React.ReactNode
-}
+  text: string;
+  children: React.ReactNode;
+  link?: string;
+};
 
-const Tooltip = ({text, children}: TooltipProps) => {
+const Tooltip = ({ text, children, link }: TooltipProps) => {
   return (
     <a
       data-tooltip-target="tooltip-default"
       type="button"
-      className="pb-0.5 text-gray-400 hvr-float hover:text-gray-500"
-      href="#top"
+      className="pb-0.5 text-gray-400 hvr-buzz-out hover:text-gray-500"
+      href={link}
     >
       <div
         id="tooltip-default"

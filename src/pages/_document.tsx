@@ -39,7 +39,7 @@ class MyDocument extends Document {
           />
           <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
         </Head>
-        <body className="font-poppins">
+        <body className="font-ubuntu">
           <Main />
           <NextScript />
         </body>
