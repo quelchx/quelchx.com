@@ -25,13 +25,13 @@ const data = {
     {
       asset: "React.js",
       details:
-        "I absolutely love the React Ecosystem. Experienced with React and libraries such as Next.js, React Native and Expo",
+        "I absolutely love the React Ecosystem. Anytime I fiddle with building an application, Next.js is my go to for the front-end. Experienced with React and libraries such as Next.js, React Native and Expo",
       icon: "fab fa-react text-cyan-500",
     },
     {
       asset: "Vue.js",
       details:
-        "Very Diverse with Vue.js and it's growing ecosystem. Well acquainted to frameworks and libraries such as Nuxt.js, Vuex, VuePress and much more.",
+        "I started designing front-end web applications with Vue.js and it's growing ecosystem when I was new. Well acquainted to it's framework and extenions such as Nuxt.js, Vuex, VuePress and much more.",
       icon: "fab fa-vuejs text-green-600",
     },
     {
@@ -60,7 +60,7 @@ const data = {
     {
       asset: "Backend Management",
       details:
-        "Accustomed to cross-platform, backend runtime enviroments such as Node.js. Strong grasp of Express, PHP, MongoDB, Firebase, Django and more",
+        "Accustomed to cross-platform, backend runtime enviroments such as Node.js. Strong grasp of Express, PHP, MongoDB, Firebase, Postgres, TypeORM and more",
       icon: "fas fa-server text-gray-500",
     },
     {
@@ -97,7 +97,7 @@ const data = {
     {
       name: "HFX CSS",
       details:
-        "A simple, minimal and very lightweight hover animation library built with Sass.",
+        "A simple, minimal and very lightweight hover animation library built with Sass. Intended to be easy to use and can be imported to any existing project",
       path: "https://npmjs.com/package/hfx-css",
       image:
         "https://www.zdnet.com/a/img/resize/41f98ac5e953bbdc816fda798ab505817d23e886/2020/01/13/7b52414d-132a-4ef9-b050-0f16e37f433b/npm.png?width=1200&height=1200&fit=crop&auto=webp",
