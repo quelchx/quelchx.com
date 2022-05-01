@@ -24,7 +24,7 @@ export default function Application({
     AOS.init();
     AOS.refresh();
     setMounted(true);
-  }, [isMounted]);
+  }, []);
   const themeManager =
     typeof cookies === "string"
       ? cookieStorageManager(cookies)
