@@ -1,4 +1,4 @@
-type AnimationProps = {
+interface AnimationProps {
   children: React.ReactNode;
   animation?: string;
   duration?: string | number;

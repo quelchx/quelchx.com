@@ -8,7 +8,7 @@ import Meta from "../components/Meta";
 import PostsWrapper from "../components/Posts";
 import BlogHero from "../components/Hero/BlogHero";
 
-export type DataProps = {
+export interface DataProps {
   title: string;
   excerpt: string;
   date: string;
@@ -16,12 +16,12 @@ export type DataProps = {
   category: string[];
 };
 
-export type Blog = {
+export interface Blog  {
   slug: string;
   data: DataProps;
 };
 
-export type BlogProps = {
+export interface BlogProps  {
   posts: Blog[];
   categories: string[];
 };

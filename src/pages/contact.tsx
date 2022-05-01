@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Meta from "../components/Meta";
 
-import Animate from "../components/Animate";
 import ContactHero from "../components/Hero/ContactHero";
 import Form from "../components/Form";
 

@@ -21,10 +21,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-type PostPageProps = {
+interface PostPageProps {
   data: DataProps;
   content: string;
-};
+}
 
 const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
   return (
@@ -48,7 +48,7 @@ const PostPage: NextPage<PostPageProps> = ({ data, content }) => {
           <section className="my-6">
             <Animate animation="fade-down">
               <ReactMarkdown
-              className="md"
+                className="md"
                 components={{
                   code({ node, inline, className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || "");

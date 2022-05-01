@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link href="/">
             <a>
               <h1 className="text-xl font-semibold cursor-pointer hvr-pulse">
-                Eric<span className="text-green-500"> Quelch</span>
+                Eric<span className="text-blue-500"> Quelch</span>
               </h1>
               <p className="text-base cursor-pointer ">
                 {data.title}

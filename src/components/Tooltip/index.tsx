@@ -1,6 +1,5 @@
 import React from "react";
-
-type TooltipProps = {
+interface TooltipProps {
   text: string;
   children: React.ReactNode;
   link?: string;

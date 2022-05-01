@@ -39,7 +39,7 @@ const ContactHero = () => {
               <p className="py-1">
                 If you would rather use your email provider to contact me{" "}
                 <a
-                  className="text-purple-500 hover:border-b-2 hover:border-cyan-700"
+                  className="text-blue-500 hover:border-b-2 hover:border-cyan-700"
                   href="mailto:quelchx@gmail.com"
                 >
                   click here

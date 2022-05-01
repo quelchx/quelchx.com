@@ -3,13 +3,13 @@ import React from "react";
 import data from "../../constants";
 import Animate from "../Animate";
 
-type HighlightHeadingProps = {
+export interface HighlightHeadingProps {
   highlights: string[];
 };
 
 const HighlightHeading = ({ highlights }: HighlightHeadingProps) => {
   return (
-    <div className="w-full grid grid-cols-2 place-items-center">
+    <div className="grid w-full grid-cols-2 text-white place-items-center">
       {highlights.map((highlight, idx) => {
         let i = data.highlights.indexOf(highlight);
         return (

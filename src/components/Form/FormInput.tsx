@@ -32,7 +32,7 @@ const FormInput = () => {
         <textarea
           name="message"
           rows={10}
-          className="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+          className="block w-full px-4 py-4 mt-2 text-xl text-gray-900 placeholder-gray-400 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
           placeholder="Message"
         />
       </div>

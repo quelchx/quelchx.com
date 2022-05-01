@@ -1,3 +1,4 @@
+import { Button, chakra, useColorModeValue } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Repo from "./Repo";
 
@@ -38,9 +39,12 @@ const Repositories = () => {
         <h1 className="max-w-lg my-20 text-3xl font-bold text-center lg:text-6xl md:my-0 lg:text-left">
           Latest Code
         </h1>
-        <a
+        <chakra.button
+          as="a"
+          bg={'blue.600'}
+          color={useColorModeValue('gray.100', 'gray.900')}
           href={`https://github.com/quelchx`}
-          className="flex flex-row items-center bg-purple-800 text-white px-6 py-4 mb-20 space-x-4 text-xl font-semibold rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0"
+          className="flex flex-row items-center px-6 py-4 mb-20 space-x-4 text-xl font-semibold rounded-md shadow-lg hvr-curl-top-right is-button md:mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +62,7 @@ const Repositories = () => {
             />
           </svg>
           <p>View GitHub</p>
-        </a>
+        </chakra.button>
       </div>
 
       <div className="grid grid-cols-1 gap-0 my-8 md:grid-cols-2 lg:grid-cols-3 md:gap-8">

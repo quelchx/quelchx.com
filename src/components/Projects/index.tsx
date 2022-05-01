@@ -4,7 +4,6 @@ import {
   Box,
   Flex,
   SimpleGrid,
-  Container,
 } from "@chakra-ui/react";
 
 import data from "../../constants";
@@ -52,7 +51,7 @@ export default function PersonalProjects() {
           downloads among my projects, check out what the buzz is about.
         </chakra.h2>
       </Box>
-      <div className="md:px-16 px-4 flex items-center">
+      <div className="flex items-center px-4 md:px-16">
         <SimpleGrid
           columns={{ base: 1, xl: 2 }}
           spacing={"4"}

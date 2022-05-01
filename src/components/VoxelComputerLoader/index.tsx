@@ -13,9 +13,9 @@ export const ComputerSpinner = () => (
 );
 
 type ComputerRef = any;
-type ComputerProps = {
+interface ComputerProps {
   children: React.ReactNode;
-};
+}
 
 export const ComputerContainer = forwardRef<ComputerRef, ComputerProps>(
   ({ children }, ref) => (

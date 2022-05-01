@@ -16,7 +16,7 @@ const Footer = () => {
             link="https://github.com/quelchx/quelchx.com"
             text="View Code"
           >
-            Eric<span className="text-green-500"> Quelch</span>
+            Eric<span className="text-blue-500"> Quelch</span>
           </Tooltip>
         </div>
         <p className="mt-4 text-sm sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">

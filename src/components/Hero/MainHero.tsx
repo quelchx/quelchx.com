@@ -1,11 +1,7 @@
-import { Avatar, Box, chakra, Container, Heading } from "@chakra-ui/react";
 import React from "react";
+import { Avatar, Box, chakra, Container, Heading } from "@chakra-ui/react";
 import { BioSection, BioYear } from "../Bio";
-import Paragraph from "../Paragraph";
 import Section from "../Section";
-import Image from "next/image";
-import HighlightHeading from "../HighlightHeading";
-import data from "../../constants";
 
 const MainHero = () => (
   <Container maxW="container.lg">

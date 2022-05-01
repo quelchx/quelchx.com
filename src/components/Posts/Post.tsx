@@ -5,14 +5,14 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(relativeTime);
-type PostProps = {
+export interface PostProps {
   post: Blog;
-};
+}
 
 const Post = ({ post }: PostProps) => {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <span className="rounded-lg cursor-pointer border-gray-700">
+      <span className="border-gray-700 rounded-lg cursor-pointer">
         <p className="my-2 text-2xl font-bold tracking-tight">
           {post.data.title}
         </p>

@@ -6,7 +6,6 @@ const StyledDiv: any = chakra(motion.div, {
     return shouldForwardProp(prop) || prop === "transition";
   },
 });
-
 interface SectionProps {
   children: React.ReactNode;
   delay: number;

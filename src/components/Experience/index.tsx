@@ -12,7 +12,7 @@ const Experience = () => {
             <h1 className="my-4 text-4xl font-bold">
               Looking For A Developer?
             </h1>
-            <p className="mt-2 text-xl text-left border-0  sm:text-xl font-poppin">
+            <p className="mt-2 text-xl text-left border-0 sm:text-xl font-poppin">
               My services will help you maximize and boost your productivity.
               <br />I know im no Linus Torvalds, Dennis Ritchie, Brendan Eich or
               Bill Gates, but I will bring motivation, passion and work hard. I

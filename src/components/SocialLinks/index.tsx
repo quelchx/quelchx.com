@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../../constants";
 
-type SocialLinksProps = {
+interface SocialLinksProps {
   children: React.ReactNode;
 };
 
@@ -25,7 +25,7 @@ const SocialLinks = ({ children }: SocialLinksProps) => {
       </a>
       <a
         href={data.social.twitter}
-        className="text-base font-normal  hvr-buzz"
+        className="text-base font-normal hvr-buzz"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
