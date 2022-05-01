@@ -1,0 +1,139 @@
+:root {
+  --tw-text-opacity: 1;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../../node_modules/hover.css/css/hover-min.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.is-icon {
+  transform: scale(3);
+}
+
+.is-nav-icon {
+  transform: scale(1.5);
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #059669;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+.is-blue {
+  color: rgba(118, 169, 250, var(--tw-text-opacity));
+}
+
+.is-green {
+  color: rgba(49, 196, 141, var(--tw-text-opacity));
+}
+
+.is-pink {
+  color: rgba(214, 31, 105, var(--tw-text-opacity));
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@layer components {
+  .md code,
+  .md kbd,
+  .md pre,
+  .md samp {
+    @apply font-monaco text-sm;
+  }
+
+  .md p {
+    @apply py-2;
+  }
+
+  .md h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply py-2 font-semibold;
+  }
+
+  .md h1 {
+    @apply text-3xl;
+  }
+
+  .md h2 {
+    @apply text-xl;
+  }
+
+  .md h3 {
+    @apply text-lg;
+  }
+
+  .md h4,
+  h5,
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  .md pre {
+    @apply px-2 py-4 my-2 overflow-x-scroll ;
+  }
+
+  .md code {
+    @apply bg-green-500 px-1
+  }
+
+  
+}
