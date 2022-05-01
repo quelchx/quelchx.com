@@ -16,7 +16,7 @@ const InputField = ({ label, name, type, placeholder }: InputProps) => {
       <input
         name={name}
         type={type}
-        className="block w-full px-4 py-4 mt-2 text-xlplaceholder-gray-400 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
+        className="block w-full px-4 py-4 mt-2 text-xl text-gray-900 placeholder-gray-600 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50"
         placeholder={placeholder}
       />
     </React.Fragment>
