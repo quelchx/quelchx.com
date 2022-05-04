@@ -52,14 +52,16 @@ const RepoPage: NextPage = () => {
             <p>View GitHub</p>
           </button>
         </div>
-        <input
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setSearchTerm(e.target.value)
-          }
-          type="text"
-          className="p-2"
-          placeholder="Search Repo's By Name"
-        />
+        <div className="mt-0 lg:mt-4">
+          <input
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setSearchTerm(e.target.value)
+            }
+            type="text"
+            className="p-2 border border-gray-500 dark:border-gray-300"
+            placeholder="Search Repo's By Name"
+          />
+        </div>
         <div className="grid grid-cols-1 gap-0 my-8 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {repos!
             .filter((val: any) => {
