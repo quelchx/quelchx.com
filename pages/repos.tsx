@@ -5,6 +5,7 @@ import { PageContainer, RepoCard } from "../components";
 
 const RepoPage: NextPage = () => {
   const [repos, setRepos] = useState<[]>();
+  const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -13,9 +14,8 @@ const RepoPage: NextPage = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        let latest = data.items.slice(0, 10);
-        setRepos(latest);
-        setInterval(() => setLoading(false), 500);
+        setRepos(data.items);
+        setInterval(() => setLoading(false), 250);
       });
   }, []);
 
@@ -52,11 +52,28 @@ const RepoPage: NextPage = () => {
             <p>View GitHub</p>
           </button>
         </div>
-
+        <input
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setSearchTerm(e.target.value)
+          }
+          type="text"
+          className="p-2"
+          placeholder="Search Repo's By Name"
+        />
         <div className="grid grid-cols-1 gap-0 my-8 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
-          {repos!.map((repo: [], idx: number) => {
-            return <RepoCard key={idx} repo={repo} />;
-          })}
+          {repos!
+            .filter((val: any) => {
+              if (searchTerm == "") {
+                return val;
+              } else if (
+                val.name.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return val;
+              }
+            })
+            .map((repo: [], idx: number) => {
+              return <RepoCard key={idx} repo={repo} />;
+            })}
         </div>
       </motion.div>
     </PageContainer>

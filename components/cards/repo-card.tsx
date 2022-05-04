@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiStar } from "react-icons/fi";
 import { BiGitRepoForked, BiLink } from "react-icons/bi";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
 import { RepoProps } from "../../@types";
 
 const svgVariant = {
@@ -19,12 +23,18 @@ const RepoCard = ({ repo }: RepoProps) => {
     description,
     stargazers_count: stars,
     forks_count: forks,
+    created_at: created,
+    updated_at: updated,
+    topics,
   } = repo;
 
   return (
     <section>
       <p className="mt-4 mb-2 font-semibold">{name.toUpperCase()}</p>
       <p>{description}</p>
+      <small>Created on: {dayjs(created).format("DD/MM/YYYY")}</small>
+      <br />
+      <small>Last Update {dayjs(updated).fromNow()}</small>
       <div className="flex flex-row gap-2 py-2">
         <motion.div
           variants={svgVariant}
@@ -55,6 +65,16 @@ const RepoCard = ({ repo }: RepoProps) => {
             <BiLink />
           </div>
         </motion.a>
+      </div>
+      <div className="flex flex-row gap-2">
+        {topics.map((topic: string) => (
+          <div
+            className="bg-blue-500 hover:bg-blue-600 p-0.5 rounded"
+            key={topic}
+          >
+            <small className="mx-[5px]">{topic}</small>
+          </div>
+        ))}
       </div>
     </section>
   );
