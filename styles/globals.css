@@ -1,0 +1,152 @@
+:root {
+  --tw-text-opacity: 1;
+}
+
+@import "../node_modules/hover.css/css/hover-min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.is-icon {
+  transform: scale(2.5);
+}
+
+.is-nav-icon {
+  transform: scale(1.5);
+}
+
+.is-blue {
+  color: rgba(118, 169, 250, var(--tw-text-opacity));
+}
+
+.is-green {
+  color: rgba(49, 196, 141, var(--tw-text-opacity));
+}
+
+.is-pink {
+  color: rgba(214, 31, 105, var(--tw-text-opacity));
+}
+
+.is-red {
+  color: rgba(142, 4, 25, var(--tw-text-opacity));
+}
+
+.is-yellow {
+  color: rgba(185, 196, 25, var(--tw-text-opacity));
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #059669;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply container max-w-6xl px-8 py-2 mx-auto md:py-6;
+  }
+
+  .accent {
+    @apply text-blue-600 hover:text-green-600 transition duration-500;
+  }
+
+  .button-main {
+    @apply inline-block mb-3 sm:mb-0 sm:mr-3.5 py-3.5 px-5 
+    text-white font-bold bg-blue-600 hover:bg-white 
+    hover:text-blue-600 hover:border-blue-600 hover:border
+    rounded-full transition duration-500;
+  }
+
+  .button-hollow {
+    @apply inline-block py-3.5 px-5 text-blue-600 font-bold border 
+    border-blue-600 rounded-full hover:bg-blue-600 hover:text-white 
+    transition duration-500;
+  }
+
+  .content {
+    @apply mb-2 text-lg font-medium leading-7 text-gray-700;
+  }
+
+  .md code,
+  .md kbd,
+  .md pre,
+  .md samp {
+    @apply text-sm;
+  }
+
+  .md p {
+    @apply py-2;
+  }
+
+  .md h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply py-2 font-semibold;
+  }
+
+  .md h1 {
+    @apply text-3xl;
+  }
+
+  .md h2 {
+    @apply text-xl;
+  }
+
+  .md h3 {
+    @apply text-lg;
+  }
+
+  .md h4,
+  h5,
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  .md pre {
+    @apply px-2 py-4 my-2 overflow-x-scroll;
+  }
+
+  .md code {
+    @apply bg-blue-600 px-1.5  text-white;
+  }
+}

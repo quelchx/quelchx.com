@@ -1,22 +1,14 @@
 const colors = require("tailwindcss/colors");
-
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js"
-  ],
-  purge: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
-        ubuntu: ["Ubuntu", "sans-serif"],
-        poppin: ["Poppins", "sans-serif"],
-        monaco: ["Monaco", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         lime: colors.lime,
@@ -24,7 +16,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
-}
+  plugins: [],
+};
