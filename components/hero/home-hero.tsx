@@ -21,16 +21,18 @@ const HomeHero = () => {
             </div>
 
             <div className="max-w-md mx-auto md:mt-2">
-              <p className="text-lg dark:text-gray-200">
-                Software Developer
-              </p>
+              <p className="text-lg dark:text-gray-200">Software Developer</p>
               <div className="mt-4">
-              <a className="button-main" href="#">
-                Developers Blog
-              </a>
-              <a className="button-hollow" href="#">
-                Projects
-              </a>
+                <Link href="/blog">
+                  <a className="button-main" href="#">
+                    Developers Blog
+                  </a>
+                </Link>
+                <Link href='/projects'>
+                  <a className="button-hollow" href="#">
+                    Projects
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
