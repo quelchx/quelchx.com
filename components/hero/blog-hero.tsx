@@ -12,7 +12,7 @@ const BlogHero = () => {
       variants={blogContainer}
       initial="hidden"
       animate="visible"
-      className="py-20"
+      className="py-20 "
     >
       <div className="container items-center max-w-6xl px-4 mx-auto sm:px-20 md:px-32 lg:px-16">
         <div className="flex flex-wrap items-center -mx-3">

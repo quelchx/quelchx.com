@@ -2,6 +2,14 @@ import { ProjectProps } from "../@types";
 
 const PROJECTS: ProjectProps[] = [
   {
+    name: "Mdote",
+    details:
+      "A Markdown based note taking application built into the browser. Quickly take a note and download it to your local machine. It's fast, simple and easy!",
+    path: "http://mdote.netlify.app",
+    image:
+      "https://www.becomingminimalist.com/wp-content/uploads/2008/07/post-it-note.jpg",
+  },
+  {
     name: "AOS Vue",
     details:
       "Animate on scroll single file component for Vue 3. This package is slowly growing with almost 1000 downloads to this day.",

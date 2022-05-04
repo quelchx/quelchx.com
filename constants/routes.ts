@@ -6,7 +6,7 @@ const ROUTES: RouteProps[] = [
     path: "/",
   },
   {
-    name: "Contact",
+    name: "Talk",
     path: "/contact",
   },
   {
@@ -18,8 +18,12 @@ const ROUTES: RouteProps[] = [
     path: '/repos'
   },
   {
-    name: 'Projects',
+    name: 'Work',
     path: '/projects'
+  },
+  {
+    name: 'Stack',
+    path: '/experience'
   }
 ];
 

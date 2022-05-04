@@ -21,7 +21,10 @@ const RepoPage: NextPage = () => {
 
   if (isLoading) {
     return (
-      <PageContainer title="Loading Latest Repos">
+      <PageContainer
+        title="Loading Latest Repos"
+        description="Eric Quelch's latest Github Contributions"
+      >
         <div className="grid h-[80vh] place-items-center">
           <div className="lds-facebook">
             <div></div>

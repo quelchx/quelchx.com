@@ -15,7 +15,7 @@ const Experience = () => {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <div className="max-w-6xl px-6 py-3 mx-auto rounded solid lg:px-12">
+      <div className="max-w-6xl px-12 py-3 mx-auto rounded solid lg:px-16">
         <div className="flex flex-col items-start leading-7 border-0 lg:items-center lg:flex-row">
           <div className="box-border flex-1 text-center border-solid sm:text-left">
             <h1 className="my-4 text-4xl font-bold">

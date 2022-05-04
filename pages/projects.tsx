@@ -4,7 +4,7 @@ import { PageContainer, Projects } from "../components";
 
 const ProjectsPage: NextPage = () => {
   return (
-    <PageContainer>
+    <PageContainer title="My Projects" description="Eric Quelch's current projects">
       <div className="my-12">
         <Projects />
       </div>

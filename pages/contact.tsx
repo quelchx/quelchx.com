@@ -4,7 +4,7 @@ import { ContactHero, FormContainer, PageContainer } from "../components";
 
 const ContactPage: NextPage = () => {
   return (
-    <PageContainer>
+    <PageContainer title='Contact Me' description="Contact Eric Quelch">
       <div className="w-full">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row">

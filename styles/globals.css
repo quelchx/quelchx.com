@@ -78,6 +78,10 @@
   }
 }
 
+.bg-dark {
+  background-color: rgb(28, 27, 34);
+}
+
 @layer components {
   .wrapper {
     @apply container max-w-6xl px-8 py-2 mx-auto md:py-6;
@@ -90,7 +94,7 @@
   .button-main {
     @apply inline-block mb-3 sm:mb-0 sm:mr-3.5 py-3.5 px-5 
     text-white font-bold bg-blue-600 hover:bg-white 
-    hover:text-blue-600 hover:border-blue-600 hover:border
+    hover:text-blue-600 hover:border-white hover:border
     rounded-full transition duration-500;
   }
 
@@ -101,7 +105,7 @@
   }
 
   .content {
-    @apply mb-2 text-lg font-medium leading-7 text-gray-700;
+    @apply mb-2 text-lg font-medium leading-7 text-gray-700 dark:text-white;
   }
 
   .md code,
