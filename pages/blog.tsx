@@ -10,7 +10,6 @@ import { BlogProps } from "../@types";
 
 const BlogPage: NextPage<BlogProps> = ({ posts, categories }) => {
   return (
-    <div className="dark:bg-neutral-900 dark:text-white">
       <PageContainer
         title="Dev Blog"
         description="Eric Quelch's Developers Blog"
@@ -18,7 +17,6 @@ const BlogPage: NextPage<BlogProps> = ({ posts, categories }) => {
         <BlogHero />
         <BlogContainer posts={posts} categories={categories} />
       </PageContainer>
-    </div>
   );
 };
 
