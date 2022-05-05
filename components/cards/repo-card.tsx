@@ -58,9 +58,9 @@ const RepoCard = ({ repo }: RepoProps) => {
           variants={svgVariant}
           whileHover="hover"
           href={repo.clone_url}
-          className="flex flex-row items-center w-full space-x-2 font-semibold group"
+          className="flex flex-row items-center w-full space-x-2 visited:text-blue-400 group"
         >
-          <p className="hvr-wobble-bottom">View Repository </p>
+          <p className="text-gray-900 hvr-wobble-bottom dark:text-white">View Repository </p>
           <div className="pt-0.5 hvr-buzz-out">
             <BiLink />
           </div>
@@ -69,7 +69,7 @@ const RepoCard = ({ repo }: RepoProps) => {
       <div className="flex flex-row gap-2">
         {topics.map((topic: string) => (
           <div
-            className="bg-blue-500 hover:bg-blue-600 p-0.5 rounded"
+            className="bg-blue-500 text-white hover:bg-blue-600 p-0.5 rounded"
             key={topic}
           >
             <small className="mx-[5px]">{topic}</small>
