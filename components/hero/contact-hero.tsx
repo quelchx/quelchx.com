@@ -33,6 +33,7 @@ const ContactHero = () => {
 
           <button className="py-2">
             <a
+              href="./equelch_resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="flex flex-row items-center px-3 py-4 mb-20 space-x-2 text-xl font-semibold text-white bg-blue-700 rounded-md shadow-lg dark:bg-blue-500 hvr-buzz-out is-button md:mb-0"
