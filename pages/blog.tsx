@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { BlogContainer, BlogHero, PageContainer } from "../components";
+import { Animate, BlogContainer, BlogHero, PageContainer } from "../components";
 import { BlogProps } from "../@types";
 
 const BlogPage: NextPage<BlogProps> = ({ posts, categories }) => {
@@ -15,8 +15,10 @@ const BlogPage: NextPage<BlogProps> = ({ posts, categories }) => {
         title="Dev Blog"
         description="Eric Quelch's Developers Blog"
       >
-        <BlogHero />
-        <BlogContainer posts={posts} categories={categories} />
+        <Animate animation="fade-left" delay={400} duration={500}>
+          <BlogHero />
+          <BlogContainer posts={posts} categories={categories} />
+        </Animate>
       </PageContainer>
     </div>
   );

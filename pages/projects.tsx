@@ -1,12 +1,17 @@
 import React from "react";
 import type { NextPage } from "next";
-import { PageContainer, Projects } from "../components";
+import { Animate, PageContainer, Projects } from "../components";
 
 const ProjectsPage: NextPage = () => {
   return (
-    <PageContainer title="My Projects" description="Eric Quelch's current projects">
+    <PageContainer
+      title="My Projects"
+      description="Eric Quelch's current projects"
+    >
       <div className="my-12">
-        <Projects />
+        <Animate animation="fade-left" delay={400} duration={500}>
+          <Projects />
+        </Animate>
       </div>
     </PageContainer>
   );

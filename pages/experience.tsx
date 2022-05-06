@@ -1,11 +1,13 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Experience, PageContainer } from "../components";
+import { Animate, Experience, PageContainer } from "../components";
 
 const ExperiencePage: NextPage = () => {
   return (
-    <PageContainer title='My Stack' description="Eric Quelch's Tech Stack">
-      <Experience />
+    <PageContainer title="My Stack" description="Eric Quelch's Tech Stack">
+      <Animate animation="fade-left" delay={400} duration={500}>
+        <Experience />
+      </Animate>
     </PageContainer>
   );
 };

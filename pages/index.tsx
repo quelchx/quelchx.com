@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import type { NextPage } from "next";
-import { Experience, HomeHero, PageContainer } from "../components";
+import { Animate, HomeHero, PageContainer } from "../components";
 
 const HomePage: NextPage = () => {
-
   return (
     <PageContainer>
-      <HomeHero />
+      <Animate animation="fade-left" delay={400} duration={600}>
+        <HomeHero />
+      </Animate>
     </PageContainer>
   );
 };
