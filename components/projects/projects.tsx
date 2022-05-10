@@ -16,8 +16,7 @@ const Projects = () => {
             Projects I Have Made
           </h2>
           <p className="my-2 text-lg ">
-            Here are a few useful packages and side projects I've created.
-            More to come in the future!
+            Here are a few packages and side projects I've created.
           </p>
         </div>
         <div className="w-full lg:w-1/2">

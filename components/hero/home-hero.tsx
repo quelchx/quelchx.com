@@ -28,7 +28,7 @@ const HomeHero = () => {
                     Developers Blog
                   </a>
                 </Link>
-                <Link href='/projects'>
+                <Link href="/projects">
                   <a className="button-hollow" href="#">
                     Projects
                   </a>
@@ -49,36 +49,35 @@ const HomeHero = () => {
                 <span className="hvr-buzz-out">👋</span> Hello everyone!
               </p>
               <p className="content">
-                If it's not obvious by now, my name is Eric Quelch. Im a
-                software developer who is currently living in London, Ontario
-                Canada. I'm a born and raised Canadian boy, and yes I absolutely
-                love Hockey if you haven't made that assumption yet. Big Toronto
-                Maple Leafs fan... go Leafs go!
+                If it's not obvious by now -- my name is Eric Quelch. I'm a
+                software developer currently living in London, Ontario. I'm a
+                born and raised Canadian boy, and I love Hockey if you haven't
+                made that assumption yet. Big Toronto Maple Leaf's fan.
               </p>
               <p className="content">
-                I'm a huge geek. I guess I'm not your sterotypical geek, I tend
-                to suprise people at times with random facts about this and
-                that.
+                I'm a huge geek. I guess I'm not your stereotypical geek, and I
+                think that surprises people at times with random facts about
+                this and that.
               </p>
               <p className="content">
-                I absolutely love tinkering with things on my computer to my
-                cars. Saying that, I think that's what made me want to pursue a
-                career as a developer.
+                I love tinkering with things on my computer to my cars. I think
+                that's what made me want to pursue a career as a developer.
               </p>
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <p className="font-semibold content md:text-xl">The Grind</p>
               <p className="content">
-                Over the past four years I have been pursing an education
-                perfecting my craft. I have earned a diploma in Internet
-                Applications and Web Development and contunie to learn new
-                things each day. One of my biggest problems is I have trouble
-                putting my computer down to stop working on something. Ask my
-                wife she gets a kick out of it 🤣
+                Over the past four years, I have pursued an education to perfect
+                my craft. I have earned a diploma in Internet Applications and
+                Web Development and continue to improve each day. One of my
+                biggest problems is I struggle to put my computer down to stop
+                working or learning something. Ask my wife she gets a kick out
+                of it 🤣
               </p>
               <p className="content">
-                I could cover a lot about myself but I'll leave it to you to get
-                to know more about me! Feel free to drop a message on my{" "}
+                I could cover a lot about myself, but that would be too long of
+                a read. If you want to know more about me! Feel free to drop a
+                message on my
                 <Link href="/contact">contact page</Link>
               </p>
             </div>

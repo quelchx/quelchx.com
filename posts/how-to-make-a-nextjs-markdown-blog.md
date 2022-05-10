@@ -12,19 +12,19 @@ cover_image: "https://seekicon.com/free-icon-download/file-markdown_2.svg"
 
 ## Creating a fresh Next Template
 
-First thing is first, we need to get a Next.js project started. We can do this by running `npx create-next-app@latest --ts` or `yarn create-next-app --typescript` you can use whichever package manager you prefer.
+First thing is first -- we need to get a Next.js project started. We can do this by running `npx create-next-app@latest --ts` or `yarn create-next-app --typescript`. Use whichever package manager you prefer.
 
-Once everything is installed, the next step is to install TailwindCSS and a few other packages. We can do this by `cd my-app && npm install -D tailwindcss postcss autoprefixer` or `cd my-app && yarn add -D tailwindcss postcss autoprefixer`, again whichever package manager you prefer.
+Once everything has installed, the next step is to install TailwindCSS and a few other packages. We can do this by `cd my-app && npm install -D tailwindcss postcss autoprefixer` or `cd my-app && yarn add -D tailwindcss postcss autoprefixer`, again use whichever package manager you prefer.
 
-After this is done we can begin working with a fresh project.
+After this has finished, we can begin working on the application.
 
 ## Before we begin
 
 The next step is to configure TailwindCSS to work with our application.
 
-Create a file and name it `tailwind.config.js` inside the root directory of the application.
+Create a file and name it `tailwind.config.js` inside the root directory (of the application).
 
-Add the following lines of script to configure our project
+Add the following lines of script to configure our setups.
 
 ```js
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
 };
 ```
 
-Then inside our `styles/global.css` file add the following:
+Then inside our `styles/global.css` file, add the following:
 
 ```css
 @tailwind base;
@@ -47,17 +47,17 @@ Then inside our `styles/global.css` file add the following:
 @tailwind utilities;
 ```
 
-If you require more information about TailwindCSS and NextJS visit https://tailwindcss.com/docs/guides/nextjs
+If you require more information about TailwindCSS and NextJS, visit https://tailwindcss.com/docs/guides/nextjs
 
 ## Folder structure and file structure
 
 Inside the directory that holds your NextJS folders and files, create a folder named **posts**.
 
-This will hold all of the markdown (`.md`) files for our blog that we can lately extract information from.
+The posts directory will hold all of the markdown (`.md`) files for our blog that we can later extract information from (like an API)
 
-Now lets create our first markdown file which will be our blog post.
+Now lets create our first markdown file, which will be our blog post.
 
-You can copy and paste the following below but this will be the structure we will be working with. We will be naming the markdown file **first-blog-post.md**
+You can copy and paste the following below, but this will be the structure we will be working around. We will be naming the markdown file **first-blog-post.md**
 
 ##### first-blog-post.md
 
@@ -74,13 +74,15 @@ cover_image: "https://i.pinimg.com/originals/f3/c5/4f/f3c54f51a7cb9de02523e226d6
 lorem ipsum....
 ```
 
-We can also generate another post with a similar structure -- just name the filepath something different like **second-blog-post.md**.
+We can also generate another post with a similar structure --  name the filepath something different like **second-blog-post.md**.
 
-Now we have two markdown files inside the **posts** directory we can now grab some of its data in our NextJS application.
+Now we have two markdown files inside the **posts** directory that we can now grab some of its data in our NextJS application.
 
-After we have done this lets create a folder inside the **pages** directory and create a file called `[slug].tsx`. We won't be doing anything with it at the moment so we will touch basis on this later.
+Now create a folder inside the **pages** directory and create a file called `[slug].tsx`. 
 
-At this point your folder structure should look like this
+We won't be doing anything with it (for the moment) -- so we will touch basis on this later.
+
+At this point your folder structure should look like this below:
 
 ```bash
 .
@@ -89,35 +91,35 @@ At this point your folder structure should look like this
 ├── next.config.js
 ├── package.json
 ├── pages
-│   ├── _app.tsx
-│   ├── api
-│   │   └── hello.ts
-│   ├── blog
-│   │   └── [slug].tsx
-│   └── index.tsx
+│   ├── _app.tsx
+│   ├── api
+│   │   └── hello.ts
+│   ├── blog
+│   │   └── [slug].tsx
+│   └── index.tsx
 ├── posts
-│   ├── first-blog-post.md
-│   └── second-blog-post.md
+│   ├── first-blog-post.md
+│   └── second-blog-post.md
 ├── public
-│   ├── favicon.ico
-│   └── vercel.svg
+│   ├── favicon.ico
+│   └── vercel.svg
 ├── styles
-│   ├── Home.module.css
-│   └── globals.css
+│   ├── Home.module.css
+│   └── globals.css
 ├── tailwind.config.js
 ├── tsconfig.json
 └── yarn.lock
 ```
 
-Basically we should have all the scaffolding we need to make the magic happen. Moving forward.
+Basically we should have all the scaffolding we need to make the magic happen. 
 
-The next bit of logic we will be doing inside the **pages/index.tsx** file.
+Next, we need to add the following inside the **pages/index.tsx** file.
 
 We need to use NextJS built in method called `getStaticProps` in order to fetch the information from each file inside the posts directory.
 
 Our index.tsx file should look like this:
 
-**Note:** Before we move forward will need to install a package called matter -- `npm i matter` or `yarn add matter` in order to parse some markdown data within this file.
+**Note:** Before we move forward will need to install a package called matter -- `npm i matter` or `yarn add matter` so we can parse some markdown data within this file.
 
 **pages/index.tsx**
 
@@ -183,11 +185,11 @@ export default Blog;
 
 A couple of things are happening in this file.
 
-With `getStaticProps` we can use NodeJS functions like `path` and `fs` to grab the data from the markdown files. Normally this would result in an error on the client end, but the `getStaticProps` function is called before the client loads.
+With `getStaticProps` -- we can use NodeJS functions like `path` and `fs` to grab the data from the markdown files. Doing this would result in an error on the client end, but the `getStaticProps` function gets called before the client loads.
 
-For more information about this check out https://nextjs.org/docs/basic-features/data-fetching/get-static-props for more information.
+For more information about this, check out https://nextjs.org/docs/basic-features/data-fetching/get-static-props.
 
-You may have noticed that there is an `<Article>` component we have not created yet. So let's do that and then we can talk about whats occuring.
+You may have noticed that there is an `<Article>` component we have not created yet. So let's do that, and then we can talk about whats occuring.
 
 Create a folder called components and add a file called `Article.tsx`
 
@@ -220,21 +222,21 @@ const Article = ({ article }: ArticleProps): JSX.Element => {
 export default Article;
 ```
 
-Inside this file we are passing a post in as a prop which is wrapped around a `<Link>` tag that NextJS offers out of the box.
+Inside this file we are passing a post in as a prop. This prop is wrapped around a `<Link>` tag that NextJS offers out of the box.
 
-This will redirect us to our `[slug].tsx` file we created earlier. Right now the `[slug].tsx` has no markup or logic -- we will get to that soon.
+Doing this will redirect us to our `[slug].tsx` file we created earlier. At the moment -- the `[slug].tsx` has no markup or logic; we will get to that soon.
 
 Note: The `[slug].tsx` file is a dynamic route.
 
-For more information about dynamic routes visit https://nextjs.org/docs/routing/dynamic-routes for more information. This will give a more in depth explination of what I can provide.
+For more information about dynamic routes, please visit https://nextjs.org/docs/routing/dynamic-routes.
 
 ## Next Steps
 
-Now we should have two simple blog posts that are showing but if we click the link it will redirect to an empty page.
+At this point we should have two simple blog posts showing, but if we click the link, it will redirect to an empty page. 
 
-Inside our `[slug].js` file we can add the following markup and logic.
+Before adding the code block, we need to install another package that will parse the Markdown into HTML. From your terminal, run `npm i @ts-stack/markdown` or `yarn add @ts-stack/markdown`
 
-Before adding the code block we need to first install another package that will parse the Markdown into HTML. From your terminal run `npm i @ts-stack/markdown` or `yarn add @ts-stack/markdown`
+With the `[slug].js` file -- add the following markup and logic below.
 
 **[slug].js**
 
@@ -320,24 +322,20 @@ export const getStaticProps: GetStaticProps = async ({
 export default PostPage;
 ```
 
-Alot is happening here. The `getStaticPaths` function NextJS offers will grab the respective path name while `getStaticProps` will use the slug param to fetch the proper post we wish to display.
+Alot is happening here. The `getStaticPaths` function NextJS offers will grab the respective path name, while `getStaticProps` will use the slug param to fetch the proper post we wish to display. If we click the link from the blog post we created in the `index.js` file, it should redirect and load the information we seek.
 
-Meaning if we click the link from the blog post we created in the `index.js` file it will redirect and load the proper information we seek.
-
-For a more in depth and detailed guide on these two NextJS functions refer to their documentation for a better breakdown.
+For a more in depth and detailed guide on these two NextJS functions, refer to their documentation for a better breakdown.
 
 ### What we have
 
-By now we should have two pages and both should be functioning. When we create new markdown files inside the posts directory, they will be fetched and loaded to the front-end. When we click the links we should be directed to the post and its contents.
+By now, we should have two pages. Both should be functioning. When we create new markdown files inside the posts directory, they will be fetched and loaded to the front-end. When we click the links, they should direct to the post and its contents.
 
 Everything should be style using some basic TailwindCSS.
 
-It isn't much but this should showcase the basic approach to creating a very minimal, simple blog using Markdown and Next.js.
+It isn't much, but this should showcase the basic approach to creating a minimal, simple blog using Markdown and Next.js.
 
-The remaining styling and UI is left up to the imagination.
+If you encounter any errors or issues, please drop a message in the contact form and let me know so I can adjust it. Or if you have any questions -- feel free to do so. http://quelchx.com/contact
 
-If you encounter any errors or issues please drop a message in the contact form and let me know so I can adjust it. Or if you have any questions feel free to do so. http://quelchx.com/contact
-
-Hope this helps someone.
+I hope this helps someone.
 
 Cheers!

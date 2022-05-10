@@ -7,22 +7,18 @@ const ContactHero = () => {
       <div className="relative flex flex-col items-center justify-center w-full px-10 h-3/5 lg:px-16 ">
         <div className="flex flex-col items-start space-y-4 tracking-tight lg:max-w-3xl">
           <div className="relative pt-2">
-            <p className="mb-1 font-medium uppercase">Want to get in touch?</p>
             <section>
               <h1 className="flex text-4xl font-bold md:text-7xl ">
-                <p className="pt-1">Contact?</p>
+                <p className="pt-1">Contact Me</p>
               </h1>
             </section>
           </div>
-          <p className="w-full py-2 text-3xl font-bold">
-            This form is deployed using Netlify.
-          </p>
           <p className="text-lg">
-            This form is safe, no information is collected and no spam emails
-            will be sent!
+            This form is safe! None of your information is collected, and you
+            will not receive spam emails.
           </p>
           <p className="py-1">
-            If you would rather use your email provider to contact me{" "}
+            If you would prefer to use your email provider to contact me,{" "}
             <a
               className="text-blue-600 hover:border-b-2 hover:border-blue-600"
               href="mailto:quelchx@gmail.com"

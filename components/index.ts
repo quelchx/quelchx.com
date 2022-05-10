@@ -13,5 +13,4 @@ export { default as FormContainer } from "./form/form-container";
 export { default as BlogContainer } from "./blog/blog-container";
 
 export { default as Projects } from "./projects/projects";
-export { default as Experience } from './experience/experience'
 export { default as Animate } from './animate/animate'

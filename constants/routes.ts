@@ -21,10 +21,6 @@ const ROUTES: RouteProps[] = [
     name: 'Work',
     path: '/projects'
   },
-  {
-    name: 'Stack',
-    path: '/experience'
-  }
 ];
 
 export default ROUTES;
