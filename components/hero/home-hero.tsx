@@ -52,7 +52,9 @@ const HomeHero = () => {
                 If it's not obvious by now -- my name is Eric Quelch. I'm a
                 software developer currently living in London, Ontario. I'm a
                 born and raised Canadian boy, and I love Hockey if you haven't
-                made that assumption yet. Big Toronto Maple Leaf's fan.
+                made that assumption yet. Im a loyal Toronto Maple Leaf's fan,
+                that hasn't missed watching a game in almost 9 years. Even if
+                they are getting thrown out of the building!
               </p>
               <p className="content">
                 I'm a huge geek. I guess I'm not your stereotypical geek, and I
